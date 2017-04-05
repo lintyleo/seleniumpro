@@ -1,0 +1,137 @@
+<html>
+<head>
+    <title>RanzhiAdvancedTests.java</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+.ln { color: #8f908a; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(102,217,239); }
+.s1 { color: rgb(241,241,241); }
+.s2 { color: rgb(204,120,50); }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+.s4 { color: rgb(249,39,108); }
+.s5 { color: rgb(165,129,255); }
+
+
+    </style>
+</head>
+<BODY BGCOLOR="#2c2c2c">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060">
+    <TR>
+        <TD>
+            <CENTER>
+                <FONT FACE="Arial, Helvetica" COLOR="#000000">
+                    RanzhiAdvancedTests.java</FONT>
+            </center>
+        </TD>
+    </TR>
+</TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0">import </span><span class="s1">org.openqa.selenium.WebDriver</span><span
+        class="s2">;</span><span class="s1">
+<a name="l2"><span class="ln">2    </span></a></span><span class="s0">import </span><span class="s1">org.openqa.selenium.firefox.FirefoxDriver</span><span
+        class="s2">;</span><span class="s1">
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">org.testng.annotations.AfterTest</span><span
+        class="s2">;</span><span class="s1">
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">org.testng.annotations.BeforeTest</span><span
+        class="s2">;</span><span class="s1">
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">org.testng.annotations.Test</span><span
+        class="s2">;</span><span class="s1">
+<a name="l6"><span class="ln">6    </span></a> 
+<a name="l7"><span class="ln">7    </span></a></span><span class="s3">/** 
+<a name="l8"><span class="ln">8    </span></a> * Created by Linty on 2/19/2017. 
+<a name="l9"><span class="ln">9    </span></a> * 然之测试用例： 
+<a name="l10"><span class="ln">10   </span></a> * 1. 测试添加用户 
+<a name="l11"><span class="ln">11   </span></a> * 2. 测试添加联系人 
+<a name="l12"><span class="ln">12   </span></a> */</span><span class="s1"> 
+<a name="l13"><span class="ln">13   </span></a></span><span class="s0">public class </span><span class="s1">RanzhiAdvancedTests { 
+<a name="l14"><span class="ln">14   </span></a> 
+<a name="l15"><span class="ln">15   </span></a>    </span><span class="s3">// 声明两个全局变量，每个方法都可以用下面的变量。</span><span
+        class="s1">
+<a name="l16"><span class="ln">16   </span></a>    </span><span class="s0">private </span><span class="s1">WebDriver baseDriver </span><span
+        class="s4">= </span><span class="s0">null</span><span class="s2">;</span><span class="s1">
+<a name="l17"><span class="ln">17   </span></a>    </span><span class="s0">private </span><span class="s1">String baseUrl </span><span
+        class="s4">= </span><span class="s0">null</span><span class="s2">;</span><span class="s1">
+<a name="l18"><span class="ln">18   </span></a>    </span><span class="s0">private </span><span class="s1">RanzhiCommon common </span><span
+        class="s4">= </span><span class="s0">null</span><span class="s2">;</span><span class="s1">
+<a name="l19"><span class="ln">19   </span></a> 
+<a name="l20"><span class="ln">20   </span></a>    </span><span class="s3">/** 
+<a name="l21"><span class="ln">21   </span></a>     * 测试前准备 
+<a name="l22"><span class="ln">22   </span></a>     * setUp的名字可以任意取，需要符合小骆驼命名规范 
+<a name="l23"><span class="ln">23   </span></a>     */</span><span class="s1"> 
+<a name="l24"><span class="ln">24   </span></a>    @BeforeTest 
+<a name="l25"><span class="ln">25   </span></a>    </span><span class="s0">public void </span><span class="s1">setUp() { 
+<a name="l26"><span class="ln">26   </span></a>        </span><span class="s3">// this. 可以省略</span><span class="s1"> 
+<a name="l27"><span class="ln">27   </span></a>        </span><span class="s3">// 表明是全局变量</span><span class="s1"> 
+<a name="l28"><span class="ln">28   </span></a>        </span><span class="s0">this</span><span
+        class="s1">.baseDriver </span><span class="s4">= </span><span class="s0">new </span><span class="s1">FirefoxDriver()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l29"><span class="ln">29   </span></a>        </span><span class="s0">this</span><span
+        class="s1">.baseUrl </span><span class="s4">= </span><span
+        class="s5">&quot;http://localhost/ranzhi/www/&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l30"><span class="ln">30   </span></a>        </span><span class="s3">// 测试之前，清理浏览器的Cookie</span><span
+        class="s1">
+<a name="l31"><span class="ln">31   </span></a>        </span><span class="s0">this</span><span class="s1">.baseDriver.manage().deleteAllCookies()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l32"><span class="ln">32   </span></a>        </span><span
+        class="s3">// 在测试之前，准备好业务模块的对象，方面每一个测试方法（步骤）进行调用</span><span class="s1">
+<a name="l33"><span class="ln">33   </span></a>        </span><span class="s3">// 实例化一个然之的业务类的对象</span><span class="s1"> 
+<a name="l34"><span class="ln">34   </span></a>        </span><span class="s3">// 必须把 baseDriver 传给业务类</span><span
+        class="s1">
+<a name="l35"><span class="ln">35   </span></a>        </span><span class="s3">// 在业务类变成对象的过程中，把baseDriver打造到骨子里去</span><span
+        class="s1">
+<a name="l36"><span class="ln">36   </span></a>        </span><span class="s0">this</span><span
+        class="s1">.common </span><span class="s4">= </span><span class="s0">new </span><span
+        class="s1">RanzhiCommon(</span><span class="s0">this</span><span class="s1">.baseDriver</span><span
+        class="s2">, </span><span class="s0">this</span><span class="s1">.baseUrl)</span><span class="s2">;</span><span
+        class="s1">
+<a name="l37"><span class="ln">37   </span></a>    } 
+<a name="l38"><span class="ln">38   </span></a> 
+<a name="l39"><span class="ln">39   </span></a>    </span><span class="s3">/** 
+<a name="l40"><span class="ln">40   </span></a>     * 测试之后的清理 
+<a name="l41"><span class="ln">41   </span></a>     */</span><span class="s1"> 
+<a name="l42"><span class="ln">42   </span></a>    @AfterTest 
+<a name="l43"><span class="ln">43   </span></a>    </span><span class="s0">public void </span><span class="s1">tearDown() { 
+<a name="l44"><span class="ln">44   </span></a>        </span><span class="s0">this</span><span class="s1">.baseDriver.quit()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l45"><span class="ln">45   </span></a>    } 
+<a name="l46"><span class="ln">46   </span></a> 
+<a name="l47"><span class="ln">47   </span></a>    </span><span class="s3">/** 
+<a name="l48"><span class="ln">48   </span></a>     * 测试步骤 和 检查 添加用户 
+<a name="l49"><span class="ln">49   </span></a>     * 1. 登录 admin 
+<a name="l50"><span class="ln">50   </span></a>     * 2. 点击左侧边栏的 齿轮按钮 “后台管理”按钮 
+<a name="l51"><span class="ln">51   </span></a>     * 3. 点击右边（主场景）中的 “添加用户”按钮 
+<a name="l52"><span class="ln">52   </span></a>     * 4. 依次输入所有要填写的 表单 
+<a name="l53"><span class="ln">53   </span></a>     * 5. 点击保存 
+<a name="l54"><span class="ln">54   </span></a>     * 6. 检查 是否添加成功 
+<a name="l55"><span class="ln">55   </span></a>     * 7. 退出 admin 
+<a name="l56"><span class="ln">56   </span></a>     * 8. 登录 新添加的用户 
+<a name="l57"><span class="ln">57   </span></a>     * 9. 检查 是否登录成功 
+<a name="l58"><span class="ln">58   </span></a>     */</span><span class="s1"> 
+<a name="l59"><span class="ln">59   </span></a>    @Test 
+<a name="l60"><span class="ln">60   </span></a>    </span><span class="s0">public void </span><span class="s1">testAddMember() </span><span
+        class="s0">throws </span><span class="s1">InterruptedException {
+<a name="l61"><span class="ln">61   </span></a> 
+<a name="l62"><span class="ln">62   </span></a>        WebDriver driver </span><span class="s4">= </span><span
+        class="s0">this</span><span class="s1">.baseDriver</span><span class="s2">;</span><span class="s1">
+<a name="l63"><span class="ln">63   </span></a>        RanzhiCommon common </span><span class="s4">= </span><span
+        class="s0">this</span><span class="s1">.common</span><span class="s2">;</span><span class="s1">
+<a name="l64"><span class="ln">64   </span></a> 
+<a name="l65"><span class="ln">65   </span></a>        common.openPage()</span><span class="s2">;</span><span
+        class="s1">
+<a name="l66"><span class="ln">66   </span></a>        common.logIn(</span><span
+        class="s5">&quot;admin&quot;</span><span class="s2">, </span><span class="s5">&quot;123456&quot;</span><span
+        class="s1">)</span><span class="s2">;</span><span class="s1">
+<a name="l67"><span class="ln">67   </span></a>        common.selectAdminApp()</span><span class="s2">;</span><span
+        class="s1">
+<a name="l68"><span class="ln">68   </span></a>        common.clickAddMemberButton()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l69"><span class="ln">69   </span></a>        common.addMemberData()</span><span class="s2">;</span><span
+        class="s1">
+<a name="l70"><span class="ln">70   </span></a> 
+<a name="l71"><span class="ln">71   </span></a> 
+<a name="l72"><span class="ln">72   </span></a>    } 
+<a name="l73"><span class="ln">73   </span></a> 
+<a name="l74"><span class="ln">74   </span></a>} 
+<a name="l75"><span class="ln">75   </span></a></span></pre>
+</body>
+</html>

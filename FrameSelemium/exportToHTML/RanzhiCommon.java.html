@@ -1,0 +1,420 @@
+<html>
+<head>
+    <title>RanzhiCommon.java</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+.ln { color: #8f908a; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(102,217,239); }
+.s1 { color: rgb(241,241,241); }
+.s2 { color: rgb(204,120,50); }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+.s4 { color: rgb(249,39,108); }
+.s5 { color: rgb(165,129,255); }
+.s6 { color: rgb(128,128,128); font-style: italic; }
+
+
+    </style>
+</head>
+<BODY BGCOLOR="#2c2c2c">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060">
+    <TR>
+        <TD>
+            <CENTER>
+                <FONT FACE="Arial, Helvetica" COLOR="#000000">
+                    RanzhiCommon.java</FONT>
+            </center>
+        </TD>
+    </TR>
+</TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0">import </span><span
+        class="s1">org.openqa.selenium.By</span><span class="s2">;</span><span class="s1">
+<a name="l2"><span class="ln">2    </span></a></span><span class="s0">import </span><span class="s1">org.openqa.selenium.WebDriver</span><span
+        class="s2">;</span><span class="s1">
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">org.openqa.selenium.WebElement</span><span
+        class="s2">;</span><span class="s1">
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">org.openqa.selenium.support.ui.Select</span><span
+        class="s2">;</span><span class="s1">
+<a name="l5"><span class="ln">5    </span></a> 
+<a name="l6"><span class="ln">6    </span></a></span><span class="s3">/** 
+<a name="l7"><span class="ln">7    </span></a> * Created by Linty on 2/12/2017. 
+<a name="l8"><span class="ln">8    </span></a> * 然之系统给的业务类 
+<a name="l9"><span class="ln">9    </span></a> * 作为公共的模块，可以给所有的用例使用 
+<a name="l10"><span class="ln">10   </span></a> */</span><span class="s1"> 
+<a name="l11"><span class="ln">11   </span></a></span><span class="s0">public class </span><span class="s1">RanzhiCommon { 
+<a name="l12"><span class="ln">12   </span></a> 
+<a name="l13"><span class="ln">13   </span></a>    </span><span class="s3">// 声明全局变量，每个方法都可以用下面的变量。</span><span
+        class="s1">
+<a name="l14"><span class="ln">14   </span></a>    </span><span class="s0">private </span><span class="s1">WebDriver baseDriver </span><span
+        class="s4">= </span><span class="s0">null</span><span class="s2">;</span><span class="s1">
+<a name="l15"><span class="ln">15   </span></a>    </span><span class="s0">private </span><span class="s1">String baseUrl </span><span
+        class="s4">= </span><span class="s0">null</span><span class="s2">;</span><span class="s1">
+<a name="l16"><span class="ln">16   </span></a> 
+<a name="l17"><span class="ln">17   </span></a>    </span><span class="s3">// 声明常量，不可以再次被修改</span><span class="s1"> 
+<a name="l18"><span class="ln">18   </span></a>    </span><span class="s0">private final </span><span class="s1">String APP_ADMIN_SELECTOR </span><span
+        class="s4">= </span><span class="s5">&quot;#s-menu-superadmin &gt; button &gt; i&quot;</span><span
+        class="s2">;</span><span class="s1">
+<a name="l19"><span class="ln">19   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_ADD_MEMBER_BUTTON_SELECTOR </span><span
+        class="s4">= </span><span class="s5">&quot;#shortcutBox &gt; div &gt; div:nth-child(1) &gt; div &gt; a &gt; h3&quot;</span><span
+        class="s2">;</span><span class="s1">
+<a name="l20"><span class="ln">20   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_FRAME_SELECTOR </span><span
+        class="s4">= </span><span class="s5">&quot;#iframe-superadmin&quot;</span><span class="s2">;</span><span
+        class="s1">
+<a name="l21"><span class="ln">21   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_ADD_MEMBER_EDIT_ACCOUNT </span><span
+        class="s4">= </span><span class="s5">&quot;#account&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l22"><span class="ln">22   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_ADD_MEMBER_EDIT_REALNAME </span><span
+        class="s4">= </span><span class="s5">&quot;#realname&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l23"><span class="ln">23   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_ADD_MEMBER_EDIT_GENDER_FEMALE </span><span
+        class="s4">= </span><span class="s5">&quot;#genderf&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l24"><span class="ln">24   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_ADD_MEMBER_EDIT_GENDER_MALE </span><span
+        class="s4">= </span><span class="s5">&quot;#genderm&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l25"><span class="ln">25   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_ADD_MEMBER_EDIT_DEPARTMENT </span><span
+        class="s4">= </span><span class="s5">&quot;#dept&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l26"><span class="ln">26   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_ADD_MEMBER_EDIT_ROLE </span><span
+        class="s4">= </span><span class="s5">&quot;#role&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l27"><span class="ln">27   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_ADD_MEMBER_EDIT_PASSWORD </span><span
+        class="s4">= </span><span class="s5">&quot;#password1&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l28"><span class="ln">28   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_ADD_MEMBER_EDIT_PASSWORD_REPEAT </span><span
+        class="s4">= </span><span class="s5">&quot;#password2&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l29"><span class="ln">29   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_ADD_MEMBER_EDIT_EMAIL </span><span
+        class="s4">= </span><span class="s5">&quot;#email&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l30"><span class="ln">30   </span></a>    </span><span class="s0">private final </span><span class="s1">String ADMIN_ADD_MEMBER_SUBMIT_SELETOR </span><span
+        class="s4">= </span><span class="s5">&quot;#submit&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l31"><span class="ln">31   </span></a> 
+<a name="l32"><span class="ln">32   </span></a> 
+<a name="l33"><span class="ln">33   </span></a>    </span><span class="s3">/** 
+<a name="l34"><span class="ln">34   </span></a>     * 打开然之登录页面的业务 
+<a name="l35"><span class="ln">35   </span></a>     */</span><span class="s1"> 
+<a name="l36"><span class="ln">36   </span></a>    </span><span class="s0">void </span><span
+        class="s1">openPage() </span><span class="s0">throws </span><span class="s1">InterruptedException {
+<a name="l37"><span class="ln">37   </span></a>        WebDriver driver </span><span class="s4">= </span><span
+        class="s0">this</span><span class="s1">.baseDriver</span><span class="s2">;</span><span class="s1">
+<a name="l38"><span class="ln">38   </span></a>        driver.get(</span><span class="s0">this</span><span class="s1">.baseUrl)</span><span
+        class="s2">;</span><span class="s1">
+<a name="l39"><span class="ln">39   </span></a>        Thread.sleep(</span><span class="s5">2000</span><span class="s1">)</span><span
+        class="s2">;</span><span class="s1">
+<a name="l40"><span class="ln">40   </span></a>    } 
+<a name="l41"><span class="ln">41   </span></a> 
+<a name="l42"><span class="ln">42   </span></a>    </span><span class="s3">/** 
+<a name="l43"><span class="ln">43   </span></a>     * 然之的切换语言的业务 
+<a name="l44"><span class="ln">44   </span></a>     */</span><span class="s1"> 
+<a name="l45"><span class="ln">45   </span></a>    String changeLanguage(String lang) </span><span
+        class="s0">throws </span><span class="s1">InterruptedException {
+<a name="l46"><span class="ln">46   </span></a>        WebDriver driver </span><span class="s4">= </span><span
+        class="s0">this</span><span class="s1">.baseDriver</span><span class="s2">;</span><span class="s1">
+<a name="l47"><span class="ln">47   </span></a>        </span><span class="s3">// 点击语言按钮</span><span class="s1"> 
+<a name="l48"><span class="ln">48   </span></a>        driver.findElement(By.cssSelector(</span><span class="s5">&quot;#langs &gt; button&quot;</span><span
+        class="s1">)).click()</span><span class="s2">;</span><span class="s1">
+<a name="l49"><span class="ln">49   </span></a>        Thread.sleep(</span><span class="s5">500</span><span
+        class="s1">)</span><span class="s2">;</span><span class="s1">
+<a name="l50"><span class="ln">50   </span></a>        </span><span class="s3">// 用Css Selector 选择 语言</span><span
+        class="s1">
+<a name="l51"><span class="ln">51   </span></a>        String langNumber </span><span class="s4">= </span><span
+        class="s5">&quot;&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l52"><span class="ln">52   </span></a>        </span><span class="s0">switch </span><span class="s1">(lang) { 
+<a name="l53"><span class="ln">53   </span></a>            </span><span class="s0">case </span><span class="s5">&quot;en&quot;</span><span
+        class="s4">:</span><span class="s1">
+<a name="l54"><span class="ln">54   </span></a>                langNumber </span><span class="s4">= </span><span
+        class="s5">&quot;3&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l55"><span class="ln">55   </span></a>                </span><span class="s0">break</span><span
+        class="s2">;</span><span class="s1">
+<a name="l56"><span class="ln">56   </span></a>            </span><span class="s0">case </span><span class="s5">&quot;zh_CN&quot;</span><span
+        class="s4">:</span><span class="s1">
+<a name="l57"><span class="ln">57   </span></a>                langNumber </span><span class="s4">= </span><span
+        class="s5">&quot;1&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l58"><span class="ln">58   </span></a>                </span><span class="s0">break</span><span
+        class="s2">;</span><span class="s1">
+<a name="l59"><span class="ln">59   </span></a>            </span><span class="s0">case </span><span class="s5">&quot;zh_TW&quot;</span><span
+        class="s4">:</span><span class="s1">
+<a name="l60"><span class="ln">60   </span></a>                langNumber </span><span class="s4">= </span><span
+        class="s5">&quot;2&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l61"><span class="ln">61   </span></a>                </span><span class="s0">break</span><span
+        class="s2">;</span><span class="s1">
+<a name="l62"><span class="ln">62   </span></a>        } 
+<a name="l63"><span class="ln">63   </span></a>        String langSelect </span><span class="s4">= </span><span
+        class="s5">&quot;#langs &gt; ul &gt; li:nth-child(&quot; </span><span class="s4">+ </span><span class="s1">langNumber </span><span
+        class="s4">+ </span><span class="s5">&quot;) &gt; a&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l64"><span
+        class="ln">64   </span></a>        driver.findElement(By.cssSelector(langSelect)).click()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l65"><span class="ln">65   </span></a>        </span><span class="s3">// 浏览器需要刷新，等待2秒钟</span><span class="s1"> 
+<a name="l66"><span class="ln">66   </span></a>        Thread.sleep(</span><span class="s5">2000</span><span class="s1">)</span><span
+        class="s2">;</span><span class="s1">
+<a name="l67"><span class="ln">67   </span></a> 
+<a name="l68"><span class="ln">68   </span></a>        </span><span class="s3">// 找到语言按钮的文字，返回给调用者</span><span
+        class="s1">
+<a name="l69"><span class="ln">69   </span></a>        String language </span><span class="s4">=</span><span class="s1"> 
+<a name="l70"><span class="ln">70   </span></a>                driver.findElement(By.cssSelector(</span><span
+        class="s5">&quot;#langs &gt; button&quot;</span><span class="s1">)).getText()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l71"><span class="ln">71   </span></a> 
+<a name="l72"><span class="ln">72   </span></a>        </span><span class="s0">return </span><span
+        class="s1">language</span><span class="s2">;</span><span class="s1">
+<a name="l73"><span class="ln">73   </span></a>    } 
+<a name="l74"><span class="ln">74   </span></a> 
+<a name="l75"><span class="ln">75   </span></a>    </span><span class="s3">/** 
+<a name="l76"><span class="ln">76   </span></a>     * 然之的登录的业务 
+<a name="l77"><span class="ln">77   </span></a>     */</span><span class="s1"> 
+<a name="l78"><span class="ln">78   </span></a>    </span><span class="s0">void </span><span class="s1">logIn(String account</span><span
+        class="s2">, </span><span class="s1">String password) </span><span class="s0">throws </span><span class="s1">InterruptedException {
+<a name="l79"><span class="ln">79   </span></a>        WebDriver driver </span><span class="s4">= </span><span
+        class="s0">this</span><span class="s1">.baseDriver</span><span class="s2">;</span><span class="s1">
+<a name="l80"><span class="ln">80   </span></a>        driver.findElement(By.id(</span><span class="s5">&quot;account&quot;</span><span
+        class="s1">)).sendKeys(account)</span><span class="s2">;</span><span class="s1">
+<a name="l81"><span class="ln">81   </span></a>        driver.findElement(By.id(</span><span class="s5">&quot;password&quot;</span><span
+        class="s1">)).sendKeys(password)</span><span class="s2">;</span><span class="s1">
+<a name="l82"><span class="ln">82   </span></a>        driver.findElement(By.id(</span><span class="s5">&quot;submit&quot;</span><span
+        class="s1">)).click()</span><span class="s2">;</span><span class="s1">
+<a name="l83"><span class="ln">83   </span></a>        </span><span class="s3">// 点击登录按钮后，需要等待浏览器刷新</span><span
+        class="s1">
+<a name="l84"><span class="ln">84   </span></a>        Thread.sleep(</span><span class="s5">2000</span><span class="s1">)</span><span
+        class="s2">;</span><span class="s1">
+<a name="l85"><span class="ln">85   </span></a>    } 
+<a name="l86"><span class="ln">86   </span></a> 
+<a name="l87"><span class="ln">87   </span></a>    </span><span class="s3">/** 
+<a name="l88"><span class="ln">88   </span></a>     * 构造方法 
+<a name="l89"><span class="ln">89   </span></a>     * 把自己这个类（设计、模板）转换成对象的时候，调用 
+<a name="l90"><span class="ln">90   </span></a>     * 
+<a name="l91"><span class="ln">91   </span></a>     * </span><span class="s6">@param </span><span class="s3">driver 调用该业务用的 浏览器（司机） 
+<a name="l92"><span class="ln">92   </span></a>     * </span><span class="s6">@param </span><span class="s3">url    调用该业务用的 地址 
+<a name="l93"><span class="ln">93   </span></a>     */</span><span class="s1"> 
+<a name="l94"><span class="ln">94   </span></a>    </span><span class="s0">public </span><span class="s1">RanzhiCommon(WebDriver driver</span><span
+        class="s2">, </span><span class="s1">String url) {
+<a name="l95"><span class="ln">95   </span></a>        </span><span class="s0">this</span><span
+        class="s1">.baseDriver </span><span class="s4">= </span><span class="s1">driver</span><span
+        class="s2">;</span><span class="s1">
+<a name="l96"><span class="ln">96   </span></a>        </span><span class="s0">this</span><span
+        class="s1">.baseUrl </span><span class="s4">= </span><span class="s1">url</span><span class="s2">;</span><span
+        class="s1">
+<a name="l97"><span class="ln">97   </span></a>    } 
+<a name="l98"><span class="ln">98   </span></a> 
+<a name="l99"><span class="ln">99   </span></a>    </span><span class="s0">void </span><span class="s1">logOut(String lang) </span><span
+        class="s0">throws </span><span class="s1">InterruptedException {
+<a name="l100"><span class="ln">100  </span></a>        WebDriver driver </span><span class="s4">= </span><span
+        class="s0">this</span><span class="s1">.baseDriver</span><span class="s2">;</span><span class="s1">
+<a name="l101"><span class="ln">101  </span></a> 
+<a name="l102"><span class="ln">102  </span></a>        </span><span class="s3">// 点头像（左下角）</span><span class="s1"> 
+<a name="l103"><span class="ln">103  </span></a>        driver.findElement(By.cssSelector(</span><span class="s5">&quot;#start &gt; div&quot;</span><span
+        class="s1">)).click()</span><span class="s2">;</span><span class="s1">
+<a name="l104"><span class="ln">104  </span></a>        Thread.sleep(</span><span class="s5">500</span><span class="s1">)</span><span
+        class="s2">;</span><span class="s1">
+<a name="l105"><span class="ln">105  </span></a> 
+<a name="l106"><span class="ln">106  </span></a>        </span><span class="s3">// 在弹出的上下文菜单，选择文字(根据语言）</span><span
+        class="s1">
+<a name="l107"><span class="ln">107  </span></a>        </span><span class="s3">// 1. 中文简体：退出</span><span class="s1"> 
+<a name="l108"><span class="ln">108  </span></a>        </span><span class="s3">// 2. 中文繁体：退出</span><span class="s1"> 
+<a name="l109"><span class="ln">109  </span></a>        </span><span class="s3">// 3. English：Logout</span><span
+        class="s1">
+<a name="l110"><span class="ln">110  </span></a>        </span><span class="s3">// 用Switch来写</span><span class="s1"> 
+<a name="l111"><span class="ln">111  </span></a>        String exitText </span><span class="s4">= </span><span
+        class="s5">&quot;&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l112"><span class="ln">112  </span></a>        </span><span class="s0">switch </span><span class="s1">(lang) { 
+<a name="l113"><span class="ln">113  </span></a>            </span><span class="s0">case </span><span class="s5">&quot;en&quot;</span><span
+        class="s4">:</span><span class="s1">
+<a name="l114"><span class="ln">114  </span></a>                exitText </span><span class="s4">= </span><span
+        class="s5">&quot;Logout&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l115"><span class="ln">115  </span></a>                </span><span class="s0">break</span><span
+        class="s2">;</span><span class="s1">
+<a name="l116"><span class="ln">116  </span></a>            </span><span class="s0">case </span><span class="s5">&quot;zh_CN&quot;</span><span
+        class="s4">:</span><span class="s1">
+<a name="l117"><span class="ln">117  </span></a>            </span><span class="s0">case </span><span class="s5">&quot;zh_TW&quot;</span><span
+        class="s4">:</span><span class="s1">
+<a name="l118"><span class="ln">118  </span></a>                exitText </span><span class="s4">= </span><span
+        class="s5">&quot;退出&quot;</span><span class="s2">;</span><span class="s1">
+<a name="l119"><span class="ln">119  </span></a>                </span><span class="s0">break</span><span
+        class="s2">;</span><span class="s1">
+<a name="l120"><span class="ln">120  </span></a>        } 
+<a name="l121"><span class="ln">121  </span></a>        driver.findElement(By.linkText(exitText)).click()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l122"><span class="ln">122  </span></a>        Thread.sleep(</span><span class="s5">2000</span><span
+        class="s1">)</span><span class="s2">;</span><span class="s1">
+<a name="l123"><span class="ln">123  </span></a> 
+<a name="l124"><span class="ln">124  </span></a>    } 
+<a name="l125"><span class="ln">125  </span></a> 
+<a name="l126"><span class="ln">126  </span></a> 
+<a name="l127"><span class="ln">127  </span></a>    </span><span class="s0">void </span><span
+        class="s1">addContact() </span><span class="s0">throws </span><span class="s1">InterruptedException {
+<a name="l128"><span class="ln">128  </span></a>        </span><span class="s3">// 点客户管理按钮</span><span class="s1"> 
+<a name="l129"><span class="ln">129  </span></a>        WebDriver driver </span><span class="s4">= </span><span
+        class="s0">this</span><span class="s1">.baseDriver</span><span class="s2">;</span><span class="s1">
+<a name="l130"><span class="ln">130  </span></a>        driver.findElement(By.cssSelector(</span><span class="s5">&quot;#s-menu-1 &gt; button &gt; img&quot;</span><span
+        class="s1">)).click()</span><span class="s2">;</span><span class="s1">
+<a name="l131"><span class="ln">131  </span></a>        Thread.sleep(</span><span class="s5">2000</span><span
+        class="s1">)</span><span class="s2">;</span><span class="s1">
+<a name="l132"><span class="ln">132  </span></a> 
+<a name="l133"><span class="ln">133  </span></a>        </span><span class="s3">// 点 上面 联系人 菜单</span><span class="s1"> 
+<a name="l134"><span class="ln">134  </span></a>        </span><span class="s3">// 这里涉及了iframe操作</span><span class="s1"> 
+<a name="l135"><span class="ln">135  </span></a>        </span><span
+        class="s3">// 1. 找到 iframe 元素对应的 css selector，存到变量中</span><span class="s1">
+<a name="l136"><span class="ln">136  </span></a>        </span><span class="s3">// 2. 调用driver.switchTo().frame(刚刚被找到的iframe元素)</span><span
+        class="s1">
+<a name="l137"><span class="ln">137  </span></a> 
+<a name="l138"><span class="ln">138  </span></a>        WebElement elementFrame </span><span class="s4">= </span><span
+        class="s1">driver.findElement(By.cssSelector(</span><span class="s5">&quot;#iframe-1&quot;</span><span
+        class="s1">))</span><span class="s2">;</span><span class="s1">
+<a name="l139"><span class="ln">139  </span></a>        driver.switchTo().frame(elementFrame)</span><span
+        class="s2">;</span><span class="s1">
+<a name="l140"><span class="ln">140  </span></a> 
+<a name="l141"><span class="ln">141  </span></a>        </span><span class="s3">// 进入紫禁城以后，正常操作</span><span class="s1"> 
+<a name="l142"><span class="ln">142  </span></a>        driver.findElement(By.cssSelector(</span><span class="s5">&quot;#mainNavbar &gt; div.collapse.navbar-collapse &gt; ul &gt; li:nth-child(6) &gt; a&quot;</span><span
+        class="s1">)).click()</span><span class="s2">;</span><span class="s1">
+<a name="l143"><span class="ln">143  </span></a>        Thread.sleep(</span><span class="s5">2000</span><span
+        class="s1">)</span><span class="s2">;</span><span class="s1">
+<a name="l144"><span class="ln">144  </span></a> 
+<a name="l145"><span class="ln">145  </span></a>        </span><span class="s3">// TODO：继续填写表单</span><span class="s1"> 
+<a name="l146"><span class="ln">146  </span></a> 
+<a name="l147"><span class="ln">147  </span></a>        </span><span class="s3">// 在紫荆城结束以后必须退出来</span><span class="s1"> 
+<a name="l148"><span class="ln">148  </span></a>        </span><span class="s3">// switchTo().frame()和 switchTo().defaultContent() 成对出现</span><span
+        class="s1">
+<a name="l149"><span class="ln">149  </span></a>        driver.switchTo().defaultContent()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l150"><span class="ln">150  </span></a> 
+<a name="l151"><span class="ln">151  </span></a> 
+<a name="l152"><span class="ln">152  </span></a>    } 
+<a name="l153"><span class="ln">153  </span></a> 
+<a name="l154"><span class="ln">154  </span></a> 
+<a name="l155"><span class="ln">155  </span></a>    </span><span class="s0">void </span><span class="s1">selectAdminApp() </span><span
+        class="s0">throws </span><span class="s1">InterruptedException {
+<a name="l156"><span class="ln">156  </span></a>        WebDriver driver </span><span class="s4">= </span><span
+        class="s0">this</span><span class="s1">.baseDriver</span><span class="s2">;</span><span class="s1">
+<a name="l157"><span class="ln">157  </span></a>        </span><span class="s3">// 点击齿轮按钮</span><span class="s1"> 
+<a name="l158"><span class="ln">158  </span></a>        driver.findElement(By.cssSelector(</span><span
+        class="s0">this</span><span class="s1">.APP_ADMIN_SELECTOR)).click()</span><span class="s2">;</span><span
+        class="s1">
+<a name="l159"><span class="ln">159  </span></a>        Thread.sleep(</span><span class="s5">1000</span><span
+        class="s1">)</span><span class="s2">;</span><span class="s1">
+<a name="l160"><span class="ln">160  </span></a>    } 
+<a name="l161"><span class="ln">161  </span></a> 
+<a name="l162"><span class="ln">162  </span></a>    </span><span class="s0">void </span><span class="s1">clickAddMemberButton() </span><span
+        class="s0">throws </span><span class="s1">InterruptedException {
+<a name="l163"><span class="ln">163  </span></a>        WebDriver driver </span><span class="s4">= </span><span
+        class="s0">this</span><span class="s1">.baseDriver</span><span class="s2">;</span><span class="s1">
+<a name="l164"><span class="ln">164  </span></a>        </span><span class="s3">// 添加成员按钮 在 紫禁城中</span><span class="s1"> 
+<a name="l165"><span class="ln">165  </span></a>        WebElement frameAdmin </span><span class="s4">= </span><span
+        class="s1">driver.findElement(By.cssSelector(</span><span class="s0">this</span><span class="s1">.ADMIN_FRAME_SELECTOR))</span><span
+        class="s2">;</span><span class="s1">
+<a name="l166"><span class="ln">166  </span></a>        driver.switchTo().frame(frameAdmin)</span><span
+        class="s2">;</span><span class="s1">
+<a name="l167"><span class="ln">167  </span></a> 
+<a name="l168"><span class="ln">168  </span></a>        </span><span class="s3">// 点击添加成员按钮</span><span class="s1"> 
+<a name="l169"><span class="ln">169  </span></a>        driver.findElement(By.cssSelector(</span><span
+        class="s0">this</span><span class="s1">.ADMIN_ADD_MEMBER_BUTTON_SELECTOR)).click()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l170"><span class="ln">170  </span></a>        Thread.sleep(</span><span class="s5">1000</span><span
+        class="s1">)</span><span class="s2">;</span><span class="s1">
+<a name="l171"><span class="ln">171  </span></a> 
+<a name="l172"><span class="ln">172  </span></a>        </span><span class="s3">// 办完事儿后，退出 紫禁城</span><span class="s1"> 
+<a name="l173"><span class="ln">173  </span></a>        </span><span class="s3">// 必须 进退 成对出现</span><span class="s1"> 
+<a name="l174"><span class="ln">174  </span></a>        driver.switchTo().defaultContent()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l175"><span class="ln">175  </span></a>    } 
+<a name="l176"><span class="ln">176  </span></a> 
+<a name="l177"><span class="ln">177  </span></a>    </span><span class="s0">void </span><span class="s1">addMemberData(Member member) </span><span
+        class="s0">throws </span><span class="s1">InterruptedException {
+<a name="l178"><span class="ln">178  </span></a>        WebDriver driver </span><span class="s4">= </span><span
+        class="s0">this</span><span class="s1">.baseDriver</span><span class="s2">;</span><span class="s1">
+<a name="l179"><span class="ln">179  </span></a>        </span><span class="s3">// 添加成员按钮 在 紫禁城中</span><span class="s1"> 
+<a name="l180"><span class="ln">180  </span></a>        WebElement frameAdmin </span><span class="s4">= </span><span
+        class="s1">driver.findElement(By.cssSelector(</span><span class="s0">this</span><span class="s1">.ADMIN_FRAME_SELECTOR))</span><span
+        class="s2">;</span><span class="s1">
+<a name="l181"><span class="ln">181  </span></a>        driver.switchTo().frame(frameAdmin)</span><span
+        class="s2">;</span><span class="s1">
+<a name="l182"><span class="ln">182  </span></a> 
+<a name="l183"><span class="ln">183  </span></a>        </span><span class="s3">// 开始填表单</span><span class="s1"> 
+<a name="l184"><span class="ln">184  </span></a>        </span><span class="s3">// 用户名</span><span class="s1"> 
+<a name="l185"><span class="ln">185  </span></a>        WebElement elementAccount </span><span class="s4">= </span><span
+        class="s1">driver.findElement(By.cssSelector(</span><span class="s0">this</span><span class="s1">.ADMIN_ADD_MEMBER_EDIT_ACCOUNT))</span><span
+        class="s2">;</span><span class="s1">
+<a name="l186"><span class="ln">186  </span></a>        elementAccount.clear()</span><span class="s2">;</span><span
+        class="s1">
+<a name="l187"><span class="ln">187  </span></a>        elementAccount.sendKeys(member.getAccount())</span><span
+        class="s2">;</span><span class="s1">
+<a name="l188"><span class="ln">188  </span></a> 
+<a name="l189"><span class="ln">189  </span></a>        </span><span class="s3">// 真实姓名</span><span class="s1"> 
+<a name="l190"><span class="ln">190  </span></a>        WebElement elementRealName </span><span
+        class="s4">= </span><span class="s1">driver.findElement(By.cssSelector(</span><span class="s0">this</span><span
+        class="s1">.ADMIN_ADD_MEMBER_EDIT_REALNAME))</span><span class="s2">;</span><span class="s1">
+<a name="l191"><span class="ln">191  </span></a>        elementRealName.clear()</span><span class="s2">;</span><span
+        class="s1">
+<a name="l192"><span class="ln">192  </span></a>        elementRealName.sendKeys(member.getRealName())</span><span
+        class="s2">;</span><span class="s1">
+<a name="l193"><span class="ln">193  </span></a> 
+<a name="l194"><span class="ln">194  </span></a>        </span><span class="s3">// 性别</span><span class="s1"> 
+<a name="l195"><span class="ln">195  </span></a>        </span><span class="s0">if </span><span class="s1">(member.getGender() </span><span
+        class="s4">== </span><span class="s1">Member.Gender.Female) {
+<a name="l196"><span class="ln">196  </span></a>            driver.findElement(By.cssSelector(</span><span class="s0">this</span><span
+        class="s1">.ADMIN_ADD_MEMBER_EDIT_GENDER_FEMALE)).click()</span><span class="s2">;</span><span class="s1">
+<a name="l197"><span class="ln">197  </span></a>        } </span><span class="s0">else </span><span class="s1">{ 
+<a name="l198"><span class="ln">198  </span></a>            driver.findElement(By.cssSelector(</span><span class="s0">this</span><span
+        class="s1">.ADMIN_ADD_MEMBER_EDIT_GENDER_MALE)).click()</span><span class="s2">;</span><span class="s1">
+<a name="l199"><span class="ln">199  </span></a>        } 
+<a name="l200"><span class="ln">200  </span></a>        </span><span class="s3">// 部门</span><span class="s1"> 
+<a name="l201"><span class="ln">201  </span></a>        WebElement elementDepartment </span><span
+        class="s4">= </span><span class="s1">driver.findElement(By.cssSelector(</span><span class="s0">this</span><span
+        class="s1">.ADMIN_ADD_MEMBER_EDIT_DEPARTMENT))</span><span class="s2">;</span><span class="s1">
+<a name="l202"><span class="ln">202  </span></a>        Select objectDepartment </span><span class="s4">= </span><span
+        class="s0">new </span><span class="s1">Select(elementDepartment)</span><span class="s2">;</span><span
+        class="s1">
+<a name="l203"><span class="ln">203  </span></a>        objectDepartment.selectByIndex(member.getDept())</span><span
+        class="s2">;</span><span class="s1">
+<a name="l204"><span class="ln">204  </span></a> 
+<a name="l205"><span class="ln">205  </span></a>        </span><span class="s3">// 角色</span><span class="s1"> 
+<a name="l206"><span class="ln">206  </span></a>        </span><span class="s3">// 是个Select元素，不可以直接操作</span><span
+        class="s1">
+<a name="l207"><span class="ln">207  </span></a>        WebElement elementRole </span><span class="s4">= </span><span
+        class="s1">driver.findElement(By.cssSelector(</span><span class="s0">this</span><span class="s1">.ADMIN_ADD_MEMBER_EDIT_ROLE))</span><span
+        class="s2">;</span><span class="s1">
+<a name="l208"><span class="ln">208  </span></a>        </span><span class="s3">// elementRole 不可以直接操作</span><span
+        class="s1">
+<a name="l209"><span class="ln">209  </span></a>        </span><span
+        class="s3">// 把 elementRole 构造成一个 Select() 对象</span><span class="s1">
+<a name="l210"><span class="ln">210  </span></a>        Select objectRole </span><span class="s4">= </span><span
+        class="s0">new </span><span class="s1">Select(elementRole)</span><span class="s2">;</span><span class="s1">
+<a name="l211"><span class="ln">211  </span></a>        objectRole.selectByIndex(member.getRole())</span><span
+        class="s2">;</span><span class="s1">
+<a name="l212"><span class="ln">212  </span></a> 
+<a name="l213"><span class="ln">213  </span></a> 
+<a name="l214"><span class="ln">214  </span></a>        </span><span class="s3">// 密码</span><span class="s1"> 
+<a name="l215"><span class="ln">215  </span></a>        WebElement elementPassword </span><span
+        class="s4">= </span><span class="s1">driver.findElement(By.cssSelector(</span><span class="s0">this</span><span
+        class="s1">.ADMIN_ADD_MEMBER_EDIT_PASSWORD))</span><span class="s2">;</span><span class="s1">
+<a name="l216"><span class="ln">216  </span></a>        elementPassword.clear()</span><span class="s2">;</span><span
+        class="s1">
+<a name="l217"><span class="ln">217  </span></a>        elementPassword.sendKeys(member.getPassword())</span><span
+        class="s2">;</span><span class="s1">
+<a name="l218"><span class="ln">218  </span></a> 
+<a name="l219"><span class="ln">219  </span></a>        </span><span class="s3">// 重复密码</span><span class="s1"> 
+<a name="l220"><span class="ln">220  </span></a>        WebElement elementPasswordRepeat </span><span
+        class="s4">= </span><span class="s1">driver.findElement(By.cssSelector(</span><span class="s0">this</span><span
+        class="s1">.ADMIN_ADD_MEMBER_EDIT_PASSWORD_REPEAT))</span><span class="s2">;</span><span class="s1">
+<a name="l221"><span class="ln">221  </span></a>        elementPasswordRepeat.clear()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l222"><span class="ln">222  </span></a>        elementPasswordRepeat.sendKeys(member.getPassword())</span><span
+        class="s2">;</span><span class="s1">
+<a name="l223"><span class="ln">223  </span></a> 
+<a name="l224"><span class="ln">224  </span></a>        </span><span class="s3">// 邮箱</span><span class="s1"> 
+<a name="l225"><span class="ln">225  </span></a>        WebElement elementEmail </span><span class="s4">= </span><span
+        class="s1">driver.findElement(By.cssSelector(</span><span class="s0">this</span><span class="s1">.ADMIN_ADD_MEMBER_EDIT_EMAIL))</span><span
+        class="s2">;</span><span class="s1">
+<a name="l226"><span class="ln">226  </span></a>        elementEmail.clear()</span><span class="s2">;</span><span
+        class="s1">
+<a name="l227"><span class="ln">227  </span></a>        elementEmail.sendKeys(member.getEmail())</span><span class="s2">;</span><span
+        class="s1">
+<a name="l228"><span class="ln">228  </span></a> 
+<a name="l229"><span class="ln">229  </span></a>        </span><span class="s3">// 点击保存按钮</span><span class="s1"> 
+<a name="l230"><span class="ln">230  </span></a>        driver.findElement(By.cssSelector(</span><span
+        class="s0">this</span><span class="s1">.ADMIN_ADD_MEMBER_SUBMIT_SELETOR)).click()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l231"><span class="ln">231  </span></a> 
+<a name="l232"><span class="ln">232  </span></a>        Thread.sleep(</span><span class="s5">2000</span><span
+        class="s1">)</span><span class="s2">;</span><span class="s1">
+<a name="l233"><span class="ln">233  </span></a> 
+<a name="l234"><span class="ln">234  </span></a>        driver.switchTo().defaultContent()</span><span
+        class="s2">;</span><span class="s1">
+<a name="l235"><span class="ln">235  </span></a> 
+<a name="l236"><span class="ln">236  </span></a> 
+<a name="l237"><span class="ln">237  </span></a>    } 
+<a name="l238"><span class="ln">238  </span></a>} 
+<a name="l239"><span class="ln">239  </span></a></span></pre>
+</body>
+</html>

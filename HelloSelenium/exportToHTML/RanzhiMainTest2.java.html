@@ -1,0 +1,158 @@
+<html>
+<head>
+    <title>RanzhiMainTest2.java</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(204,120,50); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(98,151,85); font-style: italic; }
+.s3 { color: rgb(128,128,128); }
+.s4 { color: rgb(98,151,85); font-weight: bold; font-style: italic; }
+.s5 { color: rgb(104,151,187); }
+.s6 { color: rgb(106,135,89); }
+
+
+
+    </style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060">
+    <TR>
+        <TD>
+            <CENTER>
+                <FONT FACE="Arial, Helvetica" COLOR="#000000">
+                    RanzhiMainTest2.java</FONT>
+            </center>
+        </TD>
+    </TR>
+</TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0">import </span><span
+        class="s1">org.openqa.selenium.By</span><span class="s0">;</span><span class="s1">
+<a name="l2"><span class="ln">2    </span></a></span><span class="s0">import </span><span class="s1">org.openqa.selenium.WebDriver</span><span
+        class="s0">;</span><span class="s1">
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">org.openqa.selenium.firefox.FirefoxDriver</span><span
+        class="s0">;</span><span class="s1">
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span
+        class="s1">org.testng.Assert</span><span class="s0">;</span><span class="s1">
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">org.testng.annotations.*</span><span
+        class="s0">;</span><span class="s1">
+<a name="l6"><span class="ln">6    </span></a> 
+<a name="l7"><span class="ln">7    </span></a> 
+<a name="l8"><span class="ln">8    </span></a></span><span class="s2">/** 
+<a name="l9"><span class="ln">9    </span></a> * Created by Linty on 1/8/2017. 
+<a name="l10"><span class="ln">10   </span></a> * 使用 @BeforeMethod 和 @AfterMethod 进行测试框架操作 
+<a name="l11"><span class="ln">11   </span></a> * 如果直接运行整个测试，运行步骤如下 
+<a name="l12"><span class="ln">12   </span></a> * 首先运行 @BeforeMethod 
+<a name="l13"><span class="ln">13   </span></a> * 然后运行 test01ChangeLanguage 
+<a name="l14"><span class="ln">14   </span></a> * 接着运行 @AfterMethod 
+<a name="l15"><span class="ln">15   </span></a> * 然后运行  @BeforeMethod 
+<a name="l16"><span class="ln">16   </span></a> * 接着运行 test02LogIn 
+<a name="l17"><span class="ln">17   </span></a> * 最后运行 @AfterMethod 
+<a name="l18"><span class="ln">18   </span></a> */</span><span class="s1"> 
+<a name="l19"><span class="ln">19   </span></a></span><span class="s0">public class </span><span class="s1">RanzhiMainTest2 { 
+<a name="l20"><span class="ln">20   </span></a>    </span><span class="s3">// 声明两个全局变量，每个方法都可以用下面的变量。</span><span
+        class="s1">
+<a name="l21"><span class="ln">21   </span></a>    WebDriver baseDriver = </span><span class="s0">null;</span><span
+        class="s1">
+<a name="l22"><span class="ln">22   </span></a>    String baseUrl = </span><span class="s0">null;</span><span
+        class="s1">
+<a name="l23"><span class="ln">23   </span></a> 
+<a name="l24"><span class="ln">24   </span></a>    </span><span class="s2">/** 
+<a name="l25"><span class="ln">25   </span></a>     * 测试登录 
+<a name="l26"><span class="ln">26   </span></a>     * 需要用 @Test 注解进行标注 
+<a name="l27"><span class="ln">27   </span></a>     * 这样 不用main()方法 便可直接运行测试 
+<a name="l28"><span class="ln">28   </span></a>     * </span><span class="s4">@throws </span><span class="s2">InterruptedException 
+<a name="l29"><span class="ln">29   </span></a>     */</span><span class="s1"> 
+<a name="l30"><span class="ln">30   </span></a>    @Test 
+<a name="l31"><span class="ln">31   </span></a>    </span><span class="s0">public void </span><span class="s1">test02LogIn() </span><span
+        class="s0">throws </span><span class="s1">InterruptedException {
+<a name="l32"><span class="ln">32   </span></a>        WebDriver driver = </span><span class="s0">this</span><span
+        class="s1">.baseDriver</span><span class="s0">;</span><span class="s1">
+<a name="l33"><span class="ln">33   </span></a>        driver.get(</span><span class="s0">this</span><span class="s1">.baseUrl)</span><span
+        class="s0">;</span><span class="s1">
+<a name="l34"><span class="ln">34   </span></a>        Thread.sleep(</span><span class="s5">2000</span><span class="s1">)</span><span
+        class="s0">;</span><span class="s1">
+<a name="l35"><span class="ln">35   </span></a> 
+<a name="l36"><span class="ln">36   </span></a>        driver.findElement(By.id(</span><span class="s6">&quot;account&quot;</span><span
+        class="s1">)).sendKeys(</span><span class="s6">&quot;admin&quot;</span><span class="s1">)</span><span
+        class="s0">;</span><span class="s1">
+<a name="l37"><span class="ln">37   </span></a>        driver.findElement(By.id(</span><span class="s6">&quot;password&quot;</span><span
+        class="s1">)).sendKeys(</span><span class="s6">&quot;123456&quot;</span><span class="s1">)</span><span
+        class="s0">;</span><span class="s1">
+<a name="l38"><span class="ln">38   </span></a>        driver.findElement(By.id(</span><span class="s6">&quot;submit&quot;</span><span
+        class="s1">)).click()</span><span class="s0">;</span><span class="s1">
+<a name="l39"><span class="ln">39   </span></a>        Thread.sleep(</span><span class="s5">2000</span><span class="s1">)</span><span
+        class="s0">;</span><span class="s1">
+<a name="l40"><span class="ln">40   </span></a>        String expectedUrl = </span><span class="s6">&quot;http://localhost/ranzhi/www/sys/index.html&quot;</span><span
+        class="s0">;</span><span class="s1">
+<a name="l41"><span class="ln">41   </span></a>        Assert.assertEquals(driver.getCurrentUrl()</span><span
+        class="s0">, </span><span class="s1">expectedUrl)</span><span class="s0">;</span><span class="s1">
+<a name="l42"><span class="ln">42   </span></a> 
+<a name="l43"><span class="ln">43   </span></a>    } 
+<a name="l44"><span class="ln">44   </span></a> 
+<a name="l45"><span class="ln">45   </span></a>    </span><span class="s2">/** 
+<a name="l46"><span class="ln">46   </span></a>     * 测试切换语言 
+<a name="l47"><span class="ln">47   </span></a>     * 把系统语言切换成 English 
+<a name="l48"><span class="ln">48   </span></a>     * 然后查询 语言的按钮 是不是变成了 English 
+<a name="l49"><span class="ln">49   </span></a>     * </span><span class="s4">@throws </span><span class="s2">InterruptedException 
+<a name="l50"><span class="ln">50   </span></a>     */</span><span class="s1"> 
+<a name="l51"><span class="ln">51   </span></a>    @Test 
+<a name="l52"><span class="ln">52   </span></a>    </span><span class="s0">public void </span><span class="s1">test01ChangeLanguage() </span><span
+        class="s0">throws </span><span class="s1">InterruptedException {
+<a name="l53"><span class="ln">53   </span></a>        WebDriver driver = </span><span class="s0">this</span><span
+        class="s1">.baseDriver</span><span class="s0">;</span><span class="s1">
+<a name="l54"><span class="ln">54   </span></a>        driver.get(</span><span class="s0">this</span><span class="s1">.baseUrl)</span><span
+        class="s0">;</span><span class="s1">
+<a name="l55"><span class="ln">55   </span></a>        Thread.sleep(</span><span class="s5">2000</span><span class="s1">)</span><span
+        class="s0">;</span><span class="s1">
+<a name="l56"><span class="ln">56   </span></a> 
+<a name="l57"><span class="ln">57   </span></a>        driver.findElement(By.cssSelector(</span><span class="s6">&quot;#langs &gt; button&quot;</span><span
+        class="s1">)).click()</span><span class="s0">;</span><span class="s1">
+<a name="l58"><span class="ln">58   </span></a>        Thread.sleep(</span><span class="s5">500</span><span
+        class="s1">)</span><span class="s0">;</span><span class="s1">
+<a name="l59"><span class="ln">59   </span></a>        driver.findElement(By.cssSelector(</span><span class="s6">&quot;#langs &gt; ul &gt; li:nth-child(3) &gt; a&quot;</span><span
+        class="s1">)).click()</span><span class="s0">;</span><span class="s1">
+<a name="l60"><span class="ln">60   </span></a>        Thread.sleep(</span><span class="s5">2000</span><span class="s1">)</span><span
+        class="s0">;</span><span class="s1">
+<a name="l61"><span class="ln">61   </span></a> 
+<a name="l62"><span class="ln">62   </span></a>        String expected_language = </span><span class="s6">&quot;English&quot;</span><span
+        class="s0">;</span><span class="s1">
+<a name="l63"><span class="ln">63   </span></a>        String actual_language = 
+<a name="l64"><span class="ln">64   </span></a>                driver.findElement(By.cssSelector(</span><span
+        class="s6">&quot;#langs &gt; button&quot;</span><span class="s1">)).getText()</span><span
+        class="s0">;</span><span class="s1">
+<a name="l65"><span class="ln">65   </span></a> 
+<a name="l66"><span class="ln">66   </span></a>        Assert.assertEquals(actual_language</span><span
+        class="s0">, </span><span class="s1">expected_language)</span><span class="s0">;</span><span class="s1">
+<a name="l67"><span class="ln">67   </span></a> 
+<a name="l68"><span class="ln">68   </span></a>    } 
+<a name="l69"><span class="ln">69   </span></a> 
+<a name="l70"><span class="ln">70   </span></a>    </span><span class="s2">/** 
+<a name="l71"><span class="ln">71   </span></a>     * 测试前置条件 
+<a name="l72"><span class="ln">72   </span></a>     * 在每个测试方法运行前，都需要运行一遍 
+<a name="l73"><span class="ln">73   </span></a>     */</span><span class="s1"> 
+<a name="l74"><span class="ln">74   </span></a>    @BeforeMethod 
+<a name="l75"><span class="ln">75   </span></a>    </span><span class="s0">public void </span><span class="s1">setUp() { 
+<a name="l76"><span class="ln">76   </span></a>        </span><span class="s0">this</span><span
+        class="s1">.baseDriver = </span><span class="s0">new </span><span class="s1">FirefoxDriver()</span><span
+        class="s0">;</span><span class="s1">
+<a name="l77"><span class="ln">77   </span></a>        </span><span class="s0">this</span><span
+        class="s1">.baseUrl = </span><span class="s6">&quot;http://localhost/ranzhi/www/&quot;</span><span
+        class="s0">;</span><span class="s1">
+<a name="l78"><span class="ln">78   </span></a>    } 
+<a name="l79"><span class="ln">79   </span></a> 
+<a name="l80"><span class="ln">80   </span></a>    </span><span class="s2">/** 
+<a name="l81"><span class="ln">81   </span></a>     * 测试清理操作 
+<a name="l82"><span class="ln">82   </span></a>     * 在每个测试方法运行后，都需要运行一遍 
+<a name="l83"><span class="ln">83   </span></a>     */</span><span class="s1"> 
+<a name="l84"><span class="ln">84   </span></a>    @AfterMethod 
+<a name="l85"><span class="ln">85   </span></a>    </span><span class="s0">public void </span><span class="s1">tearDown() { 
+<a name="l86"><span class="ln">86   </span></a>        </span><span class="s0">this</span><span class="s1">.baseDriver.quit()</span><span
+        class="s0">;</span><span class="s1">
+<a name="l87"><span class="ln">87   </span></a>    } 
+<a name="l88"><span class="ln">88   </span></a>} 
+<a name="l89"><span class="ln">89   </span></a></span></pre>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE window [
+        <!ENTITY % improveDTD SYSTEM "chrome://cmimprove/locale/browser.dtd">
+        %improveDTD;
+        ]>
+<overlay id="improve" xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <preferences id="mainPreferences">
+        <!-- XXX Button preferences -->
+
+        <!-- Startup -->
+        <preference id="browser.history.autoclear"
+                    name="extensions.cpmanager@mozillaonline.com.sanitize.timeout"
+                    type="int"/>
+    </preferences>
+
+    <prefpane id="paneMain">
+        <groupbox id="mozCNHistoryGroup">
+            <caption label="&cp.history.label;"/>
+
+            <hbox align="center">
+                <label value="&cp.clearHistory.label;" control="browserClearHistory"
+                       accesskey="&cp.clearHistory.accesskey;"/>
+                <menulist id="browserClearHistory" preference="browser.history.autoclear">
+                    <menupopup>
+                        <menuitem value="0" id="ce_sanitizeHistory_none" label="&cp.clearRecentHistory.none.label;"/>
+                        <menuitem value="-1" id="ce_sanitizeHistory_daily" label="&cp.clearRecentHistory.daily.label;"/>
+                        <menuitem value="-2" id="ce_sanitizeHistory_weekly"
+                                  label="&cp.clearRecentHistory.weekly.label;"/>
+                        <menuitem value="-3" id="ce_sanitizeHistory_monthly"
+                                  label="&cp.clearRecentHistory.monthly.label;"/>
+                        <menuitem value="-4" id="ce_sanitizeHistory_quarterly"
+                                  label="&cp.clearRecentHistory.querterly.label;"/>
+                        <menuitem value="-6" id="ce_sanitizeHistory_yearly"
+                                  label="&cp.clearRecentHistory.yearly.label;"/>
+                    </menupopup>
+                </menulist>
+            </hbox>
+        </groupbox>
+    </prefpane>
+
+    <vbox id="historyRememberPane">
+        <hbox align="center" flex="1">
+            <label value="&cp.clearHistory.label;" control="browserClearHistory"
+                   accesskey="&cp.clearHistory.accesskey;"/>
+            <menulist id="browserClearHistory" preference="browser.history.autoclear">
+                <menupopup>
+                    <menuitem value="0" id="ce_sanitizeHistory_none" label="&cp.clearRecentHistory.none.label;"/>
+                    <menuitem value="-1" id="ce_sanitizeHistory_daily" label="&cp.clearRecentHistory.daily.label;"/>
+                    <menuitem value="-2" id="ce_sanitizeHistory_weekly" label="&cp.clearRecentHistory.weekly.label;"/>
+                    <menuitem value="-3" id="ce_sanitizeHistory_monthly" label="&cp.clearRecentHistory.monthly.label;"/>
+                    <menuitem value="-4" id="ce_sanitizeHistory_quarterly"
+                              label="&cp.clearRecentHistory.querterly.label;"/>
+                    <menuitem value="-6" id="ce_sanitizeHistory_yearly" label="&cp.clearRecentHistory.yearly.label;"/>
+                </menupopup>
+            </menulist>
+        </hbox>
+    </vbox>
+</overlay>

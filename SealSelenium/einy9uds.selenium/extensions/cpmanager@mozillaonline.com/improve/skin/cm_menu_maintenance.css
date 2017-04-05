@@ -1,0 +1,4 @@
+#cm-menu-maintenance {
+  list-style-image: url("chrome://browser/skin/places/libraryToolbar.png");
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE window [
+        <!ENTITY % improveDTD SYSTEM "chrome://cmimprove/locale/browser.dtd">
+        %improveDTD;
+        ]>
+<overlay id="improve" xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript" src="chrome://cmimprove/content/fxa/overlay-preferences-sync.js"></script>
+    <vbox id="noFxaAccount">
+        <label id="cn-fxa-switcher" class="text-link" position="5"></label>
+    </vbox>
+</overlay>

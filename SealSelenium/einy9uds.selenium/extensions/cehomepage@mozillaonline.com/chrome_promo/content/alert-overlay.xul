@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE window SYSTEM "chrome://cehp-promo/locale/promo.dtd">
+<?xml-stylesheet href="chrome://cehp-promo/skin/alert.css" type="text/css"?>
+
+<overlay id="cehp-promo" xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <vbox id="alertTextBox">
+        <label id="alertTextLabel"
+               cehppromoprefix="&cehpPromo.prefix;"
+               cehppromosuffix="&cehpPromo.suffix;"/>
+        <hbox>
+            <spacer flex="1"/>
+            <label class="plain"
+                   id="cehpPromoNoMore"
+                   tooltiptext="&cehpPromo.noMoreAlert;"
+                   value="&cehpPromo.noMoreAlert;"/>
+        </hbox>
+    </vbox>
+
+</overlay>

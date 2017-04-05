@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<?xml-stylesheet href="chrome://cmpfs-os/skin/browser.css"?>
+<overlay id="pfs" xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="cmpfs_bundle_browser" src="chrome://cmpfs/locale/browser.properties"/>
+    </stringbundleset>
+
+    <script type="application/javascript" src="chrome://cmpfs/content/overlay-browser.js"/>
+    <script type="application/javascript" src="chrome://cmpfs/content/overlay-pfs.js"/>
+
+    <box id="notification-popup-box">
+        <image id="plugin-install-notification-icon" class="notification-anchor-icon" role="button"/>
+    </box>
+</overlay>

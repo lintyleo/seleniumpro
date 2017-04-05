@@ -1,0 +1,15 @@
+<!ENTITY cp.history.settings.label "自动清除历史选项">
+        <!ENTITY cp.history.label "历史">
+        <!ENTITY cp.clearHistory.label "自动清除历史记录:">
+        <!ENTITY cp.clearHistory.accesskey "D">
+
+        <!ENTITY cp.clearRecentHistory.none.label      "只手动清除">
+        <!ENTITY cp.clearRecentHistory.daily.label     "一天以前">
+        <!ENTITY cp.clearRecentHistory.weekly.label    "一周以前">
+        <!ENTITY cp.clearRecentHistory.monthly.label   "一个月以前">
+        <!ENTITY cp.clearRecentHistory.querterly.label "三个月以前">
+        <!ENTITY cp.clearRecentHistory.yearly.label    "一年以前">
+
+        <!ENTITY cp.clearRecentHistory.clearOnClose.label "关闭时清除历史记录">
+
+        <!ENTITY cp.mozillaComCn.label "社区论坛">

@@ -1,0 +1,33 @@
+<!ENTITY coba.switchButton.label "COBA">
+
+        <!ENTITY coba.urlbar.switch.tooltip0 "COBA Enabled">
+        <!ENTITY coba.urlbar.switch.tooltip1 "Switch rendering engine">
+        <!ENTITY coba.urlbar.switch.tooltip3 "Right-Click: Show COBA Options.">
+        <!ENTITY coba.urlbar.menuswitch.title.IE "Switch to IE Mode">
+        <!ENTITY coba.urlbar.menuswitch.title.Fx "Switch to Firefox">
+        <!ENTITY coba.urlbar.notify.title "IE Mode">
+        <!ENTITY coba.urlbar.notify.text "Switch to IE Mode">
+        <!ENTITY coba.urlbar.notify.alwaysIE "Always use IE Mode for this page">
+        <!ENTITY coba.urlbar.notify.FF "Switch to Firefox">
+
+        <!ENTITY coba.settings.title "IE Mode Options">
+        <!ENTITY coba.settings.filter.label "Custom Filter">
+        <!ENTITY coba.settings.filter.enabled "Enable Sites Filter">
+        <!ENTITY coba.settings.filter.column.rule "Rule">
+        <!ENTITY coba.settings.filter.column.enabled "Enabled">
+        <!ENTITY coba.settings.filter.url.label "URL:">
+        <!ENTITY coba.settings.filter.button.add "Add">
+        <!ENTITY coba.settings.filter.button.delete "Delete">
+        <!ENTITY coba.settings.filter.button.default "Use Default Rule">
+
+        <!ENTITY coba.settings.filter.official.label "Official Filter">
+        <!ENTITY coba.settings.filter.official.enabled "Enable Sites Filter">
+        <!ENTITY coba.settings.filter.official.updateFilter "Auto Update">
+        <!ENTITY coba.settings.filter.official.column.rule "Rule">
+        <!ENTITY coba.settings.filter.official.column.enabled "Enabled">
+
+        <!ENTITY coba.settings.apply "Apply">
+        <!ENTITY coba.settings.manager "Settings Manager">
+        <!ENTITY coba.settings.default "Restore Default">
+        <!ENTITY coba.settings.import "Import Settings">
+        <!ENTITY coba.settings.export "Export Settings">

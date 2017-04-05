@@ -1,0 +1,27 @@
+/* This is just an example.  You shouldn't do this. */
+#cntab-hello
+{
+  color: red ! important;
+}
+#cntab-toolbar-button
+{
+  list-style-image: url("chrome://cntab/skin/toolbar-button.png");
+  -moz-image-region: rect(0px 24px 24px 0px);
+}
+#cntab-toolbar-button:hover
+{
+  -moz-image-region: rect(24px 24px 48px  0px);
+}
+[iconsize="small"] #cntab-toolbar-button
+{
+  -moz-image-region: rect( 0px 40px 16px 24px);
+}
+[iconsize="small"] #cntab-toolbar-button:hover
+
+{
+  -moz-image-region: rect(24px 40px 40px 24px);
+}
+
+#nt-feedback {
+	list-style-image: url("chrome://ntab/skin/icon/feedback.png");
+}

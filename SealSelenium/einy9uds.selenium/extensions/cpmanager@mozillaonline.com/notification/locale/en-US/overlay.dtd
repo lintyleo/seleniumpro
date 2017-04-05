@@ -1,0 +1,5 @@
+<!ENTITY addonnotification.clearAllData "Clear All Data">
+        <!ENTITY addonnotification.showFunctionTips "Show Function Tips">
+
+        <!ENTITY addonnotification.tooltip.clearAllData "Clear All Addon Notification Data">
+        <!ENTITY addonnotification.tooltip.showFunctionTips "Show Function Tips">

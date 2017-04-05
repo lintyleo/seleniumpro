@@ -1,0 +1,127 @@
+body
+{
+  background-color: #fff;
+  display: inline;
+}
+
+#errorPageContainer
+{
+  border: none;
+  margin: auto;
+  margin-top: 40px;
+  padding: 0px;
+  background: url('chrome://ceerrorpage/skin/logo/errorLogo.png') no-repeat scroll left 0px content-box;
+  width: 600px;
+  min-height: 216px;
+  min-width: 50em;
+  margin-bottom: 0px;
+}
+
+#errorPageContainer > div
+{
+  margin-left: 208px;
+}
+
+#errorTitle
+{
+  color: #F63;
+  margin-top: 0px;
+  min-height: 28px;
+}
+
+#errorTitleText,
+#errorTitleText[sslv3=true]
+{
+  font-size: 220%;
+  border-bottom: none;
+  font-size: 28px;
+  background: none;
+}
+
+#errorShortDesc > p
+{
+  border-bottom: none;
+  padding-bottom: 0px;
+  color: #424242;
+  font-size: 16px;
+}
+
+#errorLongDesc
+{
+  color: #AAAAAA;
+  white-space: normal;
+  padding: 0px;
+}
+
+#errorLongDesc ul li
+{
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#errorPageContainer #goToHomePage
+{
+  margin-left: 208px;
+  margin-top: 2em;
+  background: url("chrome://ceerrorpage/skin/logo/icons.png") 8px 8px no-repeat;
+  background-color: #9ACE5C;
+}
+
+#errorPageContainer #goToHomePage:hover
+{
+  background-color: #BDCE5C;
+}
+
+#errorPageContainer #errorTryAgain
+{
+  background: url("chrome://ceerrorpage/skin/logo/icons.png") 8px -22px no-repeat;
+  background-color: #DDE0E5;
+}
+
+#errorPageContainer > button
+{
+  width: auto;
+  height: 30px;
+  padding: 0px 8px 0px 27px;
+  border: none;
+  margin-left: 10px;
+  color: #fff;
+  background-color: #DDE0E5;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+#errorPageContainer button::-moz-focus-inner
+{
+  border: 0;
+}
+
+#errorPageContainer button:hover
+{
+  background-color: #E3E4E5;
+}
+
+#recomendIframe
+{
+  display: block;
+  margin: auto;
+  width: 625px;
+  border: none;
+  margin-top: 40px;
+  clear: both;
+}
+
+#certificateErrorReportingPanel {
+  left: auto !important;
+  clear: both;
+}
+
+#certificateErrorReporting {
+  margin-bottom: 24px;
+}
+
+#reportCertificateError {
+  padding-left: 8px !important;
+}

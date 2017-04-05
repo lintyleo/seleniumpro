@@ -1,0 +1,13 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+        <!ENTITY % brandDTD
+                SYSTEM "chrome://branding/locale/brand.dtd">
+        %brandDTD;
+
+        <!ENTITY trackingSection.label          "功能及扩展使用报告">
+        <!ENTITY trackingDesc.label             "Firefox 提交功能及扩展使用报告可以帮助 Mozilla 进一步改进用户体验。">
+        <!ENTITY enableTracking.label           "启用功能及扩展使用报告">
+        <!ENTITY enableTracking.accesskey       "U">
+        <!ENTITY trackingLearnMore.label        "详细了解">

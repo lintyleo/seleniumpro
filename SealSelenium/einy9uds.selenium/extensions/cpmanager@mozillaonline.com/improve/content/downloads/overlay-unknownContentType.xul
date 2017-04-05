@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE window [
+        <!ENTITY % improveDTD SYSTEM "chrome://cmimprove/locale/downloads.dtd">
+        %improveDTD;
+        ]>
+<overlay id="improve" xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript" src="chrome://cmimprove/content/downloads/overlay-unknownContentType.js"/>
+    <radiogroup id="mode" class="small-indent">
+        <stringbundle id="bundlePreferences" src="chrome://browser/locale/preferences/preferences.properties"/>
+        <radio id="save" removeelement="true"/>
+        <hbox id="save-box">
+            <radio id="save" label="&cp.saveFile.label;" accesskey="s" selected="true"/>
+            <hbox flex="1">
+                <filefield id="downloadFolder" flex="1"/>
+                <button label="&cp.selectDir.label;" oncommand="SDI.chooseFolder()"/>
+            </hbox>
+        </hbox>
+    </radiogroup>
+</overlay>

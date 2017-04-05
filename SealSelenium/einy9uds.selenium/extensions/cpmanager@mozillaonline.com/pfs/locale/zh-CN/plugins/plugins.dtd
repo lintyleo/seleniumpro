@@ -1,0 +1,25 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+        <!ENTITY pluginWizard.title                                  "插件搜索服务">
+        <!ENTITY pluginWizard.firstPage.title                        "欢迎使用 &pluginWizard.title;">
+
+        <!ENTITY pluginWizard.checkingForPlugins.description.label   "&brandShortName; 正在检查可用插件…">
+
+        <!ENTITY pluginWizard.availablePluginsPage.title             "可用插件下载">
+        <!ENTITY pluginWizard.availablePluginsPage.description.label "以下插件现在可用：">
+        <!ENTITY pluginWizard.availablePluginsPage.continueMsg.label "请单击“下一步”安装这些插件">
+        <!ENTITY pluginWizard.availablePluginsPage.installerUI       "某些插件在安装时可能要求您提供更多信息。">
+
+        <!ENTITY pluginWizard.licensePage.title                      "插件版权协议">
+        <!ENTITY pluginWizard.licensePage.accept.label               "我同意。">
+        <!ENTITY pluginWizard.licensePage.deny.label                 "不同意（插件将不被安装）。">
+
+        <!ENTITY pluginWizard.installPluginsPage.title               "安装插件">
+        <!ENTITY pluginWizard.installPluginsPage.description.label   "&brandShortName; 正在安装插件…">
+
+        <!ENTITY pluginWizard.finalPage.description.label            "&brandShortName; 已完成安装缺失的插件：">
+
+        <!ENTITY pluginWizard.finalPage.restart.label                "&brandShortName; 需要重启以启用插件。">
+
+        <!ENTITY installPlugin                                       "安装插件…">

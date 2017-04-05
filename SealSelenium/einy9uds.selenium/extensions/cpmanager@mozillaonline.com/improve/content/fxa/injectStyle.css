@@ -1,0 +1,23 @@
+#cn-fxa-flag {
+  color: #FFF;
+  background-color: #C66;
+  border-radius: 5px;
+  padding: 0 5px;
+  margin-top: -5px;
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 20px;
+  position: relative;
+  top: -12px;
+}
+
+#cn-fxa-flag[data-entry="global"] {
+  background-color: #399;
+}
+
+#cn-fxa-switcher a,
+#cn-fxa-switcher a:visited {
+  font-size: 14px;
+  color: #BDBDBD;
+  text-decoration: none;
+}

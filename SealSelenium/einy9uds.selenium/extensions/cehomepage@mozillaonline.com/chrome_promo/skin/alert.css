@@ -1,0 +1,46 @@
+#alertBox.cehpPromo[animate] {
+  animation-duration: 8s;
+}
+
+#alertBox.cehpPromo #alertTextBox {
+  font-family: Microsoft YaHei, sans-serif;
+}
+
+#alertBox.cehpPromo #alertTitleLabel {
+  color: #0d43cc;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#alertBox.cehpPromo #alertTextLabel {
+  color: #dd0220;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#alertBox.cehpPromo #alertTextLabel::before {
+  color: #0d43cc;
+  content: attr(cehppromoprefix);
+  font-size: 12px;
+}
+
+#alertBox.cehpPromo #alertTextLabel::after {
+  color: #dd0220;
+  content: attr(cehppromosuffix);
+  font-size: 12px;
+}
+
+#cehpPromoNoMore {
+  visibility: hidden;
+}
+
+#alertBox.cehpPromo #cehpPromoNoMore {
+  color: #8c8c8c;
+  font-size: 10px;
+  visibility: visible;
+}
+
+#alertBox.cehpPromo:not(.linux) .alertCloseButton.close-icon {
+  list-style-image: url("chrome://cehp-promo/skin/close.png");
+}

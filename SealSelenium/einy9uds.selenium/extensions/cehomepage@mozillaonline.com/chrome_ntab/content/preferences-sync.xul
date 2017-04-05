@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay [
+        <!ENTITY % ntabsyncDTD SYSTEM "chrome://ntab/locale/sync.dtd">
+        %ntabsyncDTD;
+        ]>
+<overlay id="ntabsync-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript;version=1.8" src="chrome://ntab/content/preferences-sync.js"></script>
+
+    <prefpane id="paneSync">
+        <preferences id="mozCNSyncPrefs">
+            <preference id="engine.mozcn.ntab" name="services.sync.engine.mozcn.ntab" type="bool"/>
+        </preferences>
+    </prefpane>
+
+    <!-- for in-content prefs -->
+    <prefpane id="mainPrefPane">
+        <preferences id="mozCNSyncPrefs" insertafter="passwordsGroup">
+            <preference id="engine.mozcn.ntab" name="services.sync.engine.mozcn.ntab" type="bool"/>
+        </preferences>
+    </prefpane>
+
+    <richlistbox id="syncEnginesList">
+        <richlistitem>
+            <checkbox label="&engine.mozcn.ntab.label;"
+                      accesskey="&engine.mozcn.ntab.accesskey;"
+                      preference="engine.mozcn.ntab"
+                      onsynctopreference="return mozCNNTabSync.onSyncToEnablePref(this);"/>
+        </richlistitem>
+    </richlistbox>
+</overlay>

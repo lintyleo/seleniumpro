@@ -1,0 +1,24 @@
+<!ENTITY ntabContext.label "添加至快速拨号">
+        <!ENTITY ntabContext.accesskey "Y">
+
+        <!ENTITY ntab.contextmenu.refresh "刷新">
+        <!ENTITY ntab.contextmenu.refresh.accesskey "R">
+        <!ENTITY ntab.contextmenu.refreshall "刷新全部">
+        <!ENTITY ntab.contextmenu.refreshall.accesskey "A">
+        <!ENTITY ntab.contextmenu.edit "编辑">
+        <!ENTITY ntab.contextmenu.edit.accesskey "E">
+
+        <!ENTITY ntab.contextmenu.export.accesskey "X">
+        <!ENTITY ntab.contextmenu.export "导出我的配置文件">
+        <!ENTITY ntab.contextmenu.import.accesskey "I">
+        <!ENTITY ntab.contextmenu.import "导入我的配置文件">
+
+        <!ENTITY ntab.contextmenu.reset.accesskey "S">
+        <!ENTITY ntab.contextmenu.reset "重置快速拨号">
+
+        <!ENTITY cehptitle "火狐主页">
+
+        <!ENTITY ntab.contextmenu.useopacity.accesskey "T">
+        <!ENTITY ntab.contextmenu.useopacity "设为半透明">
+        <!ENTITY ntab.contextmenu.moreoptions.accesskey "M">
+        <!ENTITY ntab.contextmenu.moreoptions "更多设置">

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://cmnotification/skin/options.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://cmnotification/locale/options.dtd">
+
+<overlay
+        id="an-options-overlay"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/javascript">
+        (function() {
+        /* still not sure why sizeToContent call in _selectPane() cannot set
+        correct height for the prefwindow after the first time it is shown,
+        so just call it on prefwindow load to fix it */
+        function resizeToContent() {
+        window.sizeToContent();
+        }
+        window.addEventListener('load', resizeToContent, false)
+        })();
+    </script>
+
+    <prefwindow id="cpmanagerOptions">
+        <prefpane id="notifierpane"
+                  label="&notifierpane.label;"
+                  image="chrome://cmnotification/skin/info.png"
+                  src="chrome://cmnotification/content/notifierpane.xul"
+                  flex="1"/>
+    </prefwindow>
+
+</overlay>

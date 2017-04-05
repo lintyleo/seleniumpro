@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<overlay id="improve" xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript" src="chrome://cmtracking/content/dataChoices/overlay-browser.js"/>
+    <vbox id="browser-bottombox">
+        <notificationbox id="global-notificationbox" insertafter="developer-toolbar"/>
+    </vbox>
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="cmtracking_bundle" src="chrome://cmtracking/locale/cmtracking.properties"/>
+    </stringbundleset>
+</overlay>

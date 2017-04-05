@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://ntab/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://ntab/locale/overlay.dtd">
+<overlay id="ntab-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script src="moa.js"/>
+    <script src="overlay.js"/>
+    <script src="sendlink.js"/>
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="ntab-strings" src="chrome://ntab/locale/overlay.properties"/>
+    </stringbundleset>
+
+    <command id="Browser:SendLink" oncommand="MOA.NTab.SendLink.onMenuItemCommand(event);"/>
+    <menuitem id="context-sendpage" oncommand="MOA.NTab.SendLink.onMenuItemCommand(event)"/>
+    <menuitem id="context-sendlink" oncommand="MOA.NTab.SendLink.onContextItemCommand(event);"/>
+
+    <popup id="contentAreaContextMenu">
+        <menuitem id="context-ntab" label="&ntabContext.label;"
+                  accesskey="&ntabContext.accesskey;"
+                  insertafter="context-stop"
+                  oncommand="MOA.NTab.onMenuItemCommand(event)"/>
+    </popup>
+</overlay>

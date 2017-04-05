@@ -1,0 +1,796 @@
+{
+  "schemaVersion": 17,
+  "addons": [
+    {
+      "id": "cehomepage@mozillaonline.com",
+      "syncGUID": "E0RPiCBcuGtG",
+      "location": "app-profile",
+      "version": "0.10.46",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": "http://g-fox.cn/chinaedition/addons/cehomepage-iii/update.rdf?version=%ITEM_VERSION%&pt=%CEHP_PREF_TRACKING%",
+      "updateKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCd77P/ko6LTPMWcIjA5+0AJ7Y2w1CA31UYNTLA6OMwc9kcvO407SrE649A1ZUOi8bDPvJ6/KqVU9zPmv1XY1SjpEF8RlXP5SQ4KXirH4wnBk94cklYJTeDVuGOvCZS4KNazsjibERhRE7oGxg3X+rw+Ifu14AmAqXm4lyMrYIt/QIDAQAB",
+      "optionsURL": "chrome://ntab/content/options.xul",
+      "optionsType": null,
+      "aboutURL": null,
+      "icons": {},
+      "iconURL": null,
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "Firefox Homepage",
+        "description": "Customizied Home Page for Firefox",
+        "creator": "Mozilla Online Limited",
+        "homepageURL": "http://www.firefox.com.cn/",
+        "contributors": [
+          "Leding Li",
+          "Ray Cheung",
+          "Xuan Xie",
+          "jiangwei1212@gmail.com",
+          "Wennan Zhu",
+          "Amax Guan"
+        ]
+      },
+      "visible": true,
+      "active": true,
+      "userDisabled": false,
+      "appDisabled": false,
+      "descriptor": "C:\\Users\\Linty\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\einy9uds.selenium\\extensions\\cehomepage@mozillaonline.com",
+      "installDate": 1488334611200,
+      "updateDate": 1488334611200,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": false,
+      "skinnable": false,
+      "size": 863690,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": false,
+      "hasBinaryComponents": false,
+      "strictCompatibility": false,
+      "locales": [
+        {
+          "locales": [
+            "zh-CN"
+          ],
+          "name": "火狐主页",
+          "description": "火狐定制主页，包括最近访问页面、最常访问页面以及新标签页等",
+          "creator": "Mozilla Online Limited",
+          "homepageURL": "http://www.firefox.com.cn/"
+        }
+      ],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "24.0",
+          "maxVersion": "46.*"
+        }
+      ],
+      "targetPlatforms": [],
+      "multiprocessCompatible": false,
+      "signedState": 1,
+      "seen": true
+    },
+    {
+      "id": "coba@mozilla.com.cn",
+      "syncGUID": "jjEeHy5Of-Np",
+      "location": "app-profile",
+      "version": "1.0.32",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": "http://g-fox.cn/chinaedition/addons/coba/update.rdf",
+      "updateKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDI9oBz+hSfHlNBrgdtc60mLujdpK4sCVDH1rD+1bh7++ni8ltJD0trCfhUKKiC234iMhHBgcr/bD9kYUbv7nlCz0lqPKM3DZC4eSgLsk8m077fk1Mmob3Pw5ZZlbCO9PWmwH2h/n9oUdx1YvrKN1+e2cocckcw4uGqalFGfYa9ywIDAQAB",
+      "optionsURL": "chrome://coba/content/setting.xul",
+      "optionsType": null,
+      "aboutURL": null,
+      "icons": {},
+      "iconURL": "chrome://coba/skin/logo.ico",
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "COBA",
+        "description": "China Online Banking Assistant for Mozilla/Firefox.",
+        "creator": "Mozilla Online Limited",
+        "homepageURL": "http://www.firefox.com.cn/",
+        "developers": [
+          "Yuan Xulei",
+          "Jiao Feng",
+          "Deng Wei",
+          "Rui You"
+        ]
+      },
+      "visible": true,
+      "active": true,
+      "userDisabled": false,
+      "appDisabled": false,
+      "descriptor": "C:\\Users\\Linty\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\einy9uds.selenium\\extensions\\coba@mozilla.com.cn",
+      "installDate": 1488334611492,
+      "updateDate": 1488334611492,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": false,
+      "skinnable": false,
+      "size": 2128394,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": false,
+      "hasBinaryComponents": false,
+      "strictCompatibility": false,
+      "locales": [
+        {
+          "locales": [
+            "zh-CN"
+          ],
+          "name": "网银支付助手",
+          "description": "为火狐用户提供支付帮助.",
+          "creator": "Mozilla Online Limited",
+          "homepageURL": "http://www.firefox.com.cn/",
+          "developers": [
+            "袁徐磊",
+            "焦锋",
+            "邓威",
+            "尤睿"
+          ]
+        }
+      ],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "31.0",
+          "maxVersion": "44.*"
+        }
+      ],
+      "targetPlatforms": [
+        {
+          "os": "WINNT",
+          "abi": null
+        }
+      ],
+      "multiprocessCompatible": false,
+      "signedState": 1,
+      "seen": true
+    },
+    {
+      "id": "commonfix@mozillaonline.com",
+      "syncGUID": "sig0pMZpMX4Z",
+      "location": "app-profile",
+      "version": "0.13",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": "http://g-fox.cn/chinaedition/addons/commonfix/update.rdf?version=%ITEM_VERSION%",
+      "updateKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDeWvjaUcwQNMeAWcb1wdPKadNOUPB2Dp9/4SMWOshbJp7NcY+q46tt1rxwKJa+YVo7ohz5MxqWhxaQaAmEEhrUPIDNTvHEaBrpPMRXWGocSPd6reTvrncivMQpchW2wskMrYZUqtnslffxTKHvLuMnANzdzybzFkqaUDcYPbcEBwIDAQAB",
+      "optionsURL": null,
+      "optionsType": null,
+      "aboutURL": null,
+      "icons": {
+        "32": "icon.png",
+        "48": "icon.png",
+        "64": "icon64.png"
+      },
+      "iconURL": null,
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "火狐修复工具",
+        "description": "让您方便的一键修复大部分浏览器使用中的常见问题，也可以针对您所遇到的问题选择手动修复、或是向我们报告问题获得帮助。网站无法登录、flash播放崩溃、迅雷下载无法关联等问题，帮您快速修复。",
+        "creator": "Mozilla Online Ltd.",
+        "homepageURL": "http://firefox.com.cn/"
+      },
+      "visible": true,
+      "active": true,
+      "userDisabled": false,
+      "appDisabled": false,
+      "descriptor": "C:\\Users\\Linty\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\einy9uds.selenium\\extensions\\commonfix@mozillaonline.com.xpi",
+      "installDate": 1488334611517,
+      "updateDate": 1488334611517,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": true,
+      "skinnable": false,
+      "size": 131376,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": false,
+      "hasBinaryComponents": false,
+      "strictCompatibility": false,
+      "locales": [],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "29.0",
+          "maxVersion": "40.*"
+        }
+      ],
+      "targetPlatforms": [
+        {
+          "os": "WINNT",
+          "abi": null
+        }
+      ],
+      "multiprocessCompatible": false,
+      "signedState": 1,
+      "seen": true
+    },
+    {
+      "id": "cpmanager@mozillaonline.com",
+      "syncGUID": "sEkj4NSWIFYE",
+      "location": "app-profile",
+      "version": "1.5.12",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": "http://g-fox.cn/chinaedition/addons/cpmanager-bsb/update.rdf?version=%ITEM_VERSION%",
+      "updateKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2zWwTHIR23xreMABqMJXj1YrFowjiaBieTNqC2bE9PImSaMBxmYqrQ/UryquunGB0LJVE6tzzdioK9KFp+8ZO4eZL0fpxA9I+8mp+g3MTwqMVZD5ma3qwEGDngATaJwlcWY5xmrWcWNUgogP7n6JYuw0Giuc7crDNK3n1/nCbhwIDAQAB",
+      "optionsURL": "chrome://cmsafeflag/content/options.xul",
+      "optionsType": null,
+      "aboutURL": null,
+      "icons": {},
+      "iconURL": null,
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "Addons Manager",
+        "description": "To manage the addons package in Firefox.",
+        "creator": "Mozilla Online Limited",
+        "homepageURL": "http://www.firefox.com.cn/",
+        "contributors": [
+          "Conchshell",
+          "Ray Cheung",
+          "Xuan Xie",
+          "Jiao Feng",
+          "Rui You"
+        ]
+      },
+      "visible": true,
+      "active": true,
+      "userDisabled": false,
+      "appDisabled": false,
+      "descriptor": "C:\\Users\\Linty\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\einy9uds.selenium\\extensions\\cpmanager@mozillaonline.com",
+      "installDate": 1488334612078,
+      "updateDate": 1488334612078,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": false,
+      "skinnable": false,
+      "size": 591300,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": false,
+      "hasBinaryComponents": false,
+      "strictCompatibility": false,
+      "locales": [
+        {
+          "locales": [
+            "zh-CN"
+          ],
+          "name": "附加组件管理器",
+          "description": "用来管理火狐的附加组件系统。",
+          "creator": "Mozilla Online Limited",
+          "homepageURL": "http://www.firefox.com.cn/"
+        }
+      ],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "29.0",
+          "maxVersion": "46.*"
+        }
+      ],
+      "targetPlatforms": [],
+      "multiprocessCompatible": false,
+      "signedState": 1,
+      "seen": true
+    },
+    {
+      "id": "easyscreenshot@mozillaonline.com",
+      "syncGUID": "Mq6f-DW7nL5e",
+      "location": "app-profile",
+      "version": "1.2.7.2",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": null,
+      "updateKey": null,
+      "optionsURL": null,
+      "optionsType": null,
+      "aboutURL": null,
+      "icons": {
+        "32": "icon.png",
+        "48": "icon.png",
+        "64": "icon64.png"
+      },
+      "iconURL": null,
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "Easy Screenshot",
+        "description": "You can capture a screen shot by selecting an area or capture the whole/visible webpage. Then edit and save it as an image file.",
+        "creator": "Mozilla Online",
+        "homepageURL": "http://www.firefox.com.cn/"
+      },
+      "visible": true,
+      "active": true,
+      "userDisabled": false,
+      "appDisabled": false,
+      "descriptor": "C:\\Users\\Linty\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\einy9uds.selenium\\extensions\\easyscreenshot@mozillaonline.com",
+      "installDate": 1488334612411,
+      "updateDate": 1488334612411,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": false,
+      "skinnable": false,
+      "size": 302193,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": false,
+      "hasBinaryComponents": false,
+      "strictCompatibility": false,
+      "locales": [
+        {
+          "locales": [
+            "zh-CN"
+          ],
+          "name": "网页截图",
+          "description": "方便的截图工具，支持任意选定区域截图、全网页截图等多种截图方式，并提供必要的图片编辑功能。",
+          "creator": "Mozilla Online",
+          "homepageURL": "http://www.firefox.com.cn/"
+        },
+        {
+          "locales": [
+            "zh-TW"
+          ],
+          "name": "網頁截圖",
+          "description": "方便的截圖工具，支持任意選定區域截圖、全網頁截圖等多種截圖方式，并提供必要的圖片編輯功能。",
+          "creator": "Mozilla Online",
+          "homepageURL": null
+        }
+      ],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "38.0",
+          "maxVersion": "40.*"
+        }
+      ],
+      "targetPlatforms": [],
+      "multiprocessCompatible": false,
+      "signedState": 2,
+      "seen": true
+    },
+    {
+      "id": "tabtweak@mozillaonline.com",
+      "syncGUID": "tNtpvLDCuXhQ",
+      "location": "app-profile",
+      "version": "3.0.46",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": "http://g-fox.cn/chinaedition/addons/tabtweak/update.rdf?version=%ITEM_VERSION%",
+      "updateKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAvclCQ8nXMVB+UZpw2bLa7Qep6UO1YV6quUpw0RBDQgh5BMX6d4VaW/ZwMts7dFRA/7+yfjr3DTG036ldlRdnho6EztgDZKpLuU5tEORc9JfVspqb1Yw7ePRrKuc0vPyq1+2f1eEuXmikK3DGImd2lL9AoNYwHj7/+ERhntRQsQIDAQAB",
+      "optionsURL": null,
+      "optionsType": null,
+      "aboutURL": null,
+      "icons": {
+        "32": "icon.png",
+        "48": "icon.png",
+        "64": "icon64.png"
+      },
+      "iconURL": null,
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "Tab Tweak",
+        "description": "Tweak tab browsing by setting default behaviors.",
+        "creator": "Mozilla Online Limited",
+        "homepageURL": "http://firefox.com.cn",
+        "contributors": [
+          "Rui You"
+        ]
+      },
+      "visible": true,
+      "active": true,
+      "userDisabled": false,
+      "appDisabled": false,
+      "descriptor": "C:\\Users\\Linty\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\einy9uds.selenium\\extensions\\tabtweak@mozillaonline.com.xpi",
+      "installDate": 1488334612482,
+      "updateDate": 1488334612482,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": false,
+      "skinnable": false,
+      "size": 21038,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": false,
+      "hasBinaryComponents": false,
+      "strictCompatibility": true,
+      "locales": [
+        {
+          "locales": [
+            "zh-CN"
+          ],
+          "name": "标签页优化",
+          "description": "设置打开链接和关闭标签的默认行为，方便使用。",
+          "creator": "Mozilla Online Limited",
+          "homepageURL": "http://www.firefox.com.cn/",
+          "contributors": [
+            "Rui You"
+          ]
+        }
+      ],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "35.0",
+          "maxVersion": "46.*"
+        }
+      ],
+      "targetPlatforms": [],
+      "multiprocessCompatible": false,
+      "signedState": 1,
+      "seen": true
+    },
+    {
+      "id": "wx-assistant@mozillaonline.com",
+      "syncGUID": "sqYU1Sw_qB4w",
+      "location": "app-profile",
+      "version": "1.1.5",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": "http://g-fox.cn/chinaedition/addons/wxassistant/update.rdf",
+      "updateKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCpFmVAM8fYNRL++4sBuPoLijMqvyFtylorBpDBZJZLyoqAP2R4YXtjtRR0PSyvWXH0p6+CHQiY4BdjBLS/qgf8sfhoMbbMRxUhdxz9NSWMwY+iBHq9SP8VJLquLtKRUOVk2+eFLlu/XJazKwnPC17NgqJtHqE+uhhPpTmmDW3C3wIDAQAB",
+      "optionsURL": null,
+      "optionsType": "2",
+      "aboutURL": null,
+      "icons": {
+        "32": "icon.png",
+        "48": "icon.png",
+        "64": "icon64.png"
+      },
+      "iconURL": null,
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "微信网页版助手",
+        "description": "一键打开微信网页版，同时在微信有新消息时给出及时的消息提醒",
+        "creator": "Mozilla Online Ltd.",
+        "homepageURL": "http://firefox.com.cn/"
+      },
+      "visible": true,
+      "active": true,
+      "userDisabled": false,
+      "appDisabled": false,
+      "descriptor": "C:\\Users\\Linty\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\einy9uds.selenium\\extensions\\wx-assistant@mozillaonline.com.xpi",
+      "installDate": 1488334612502,
+      "updateDate": 1488334612502,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": true,
+      "skinnable": false,
+      "size": 171994,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": false,
+      "hasBinaryComponents": false,
+      "strictCompatibility": false,
+      "locales": [],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "29.0",
+          "maxVersion": "40.*"
+        }
+      ],
+      "targetPlatforms": [],
+      "multiprocessCompatible": false,
+      "signedState": 1,
+      "seen": true
+    },
+    {
+      "id": "e10srollout@mozilla.org",
+      "syncGUID": "C3o43OU7L3LU",
+      "location": "app-system-defaults",
+      "version": "1.0",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": null,
+      "updateKey": null,
+      "optionsURL": null,
+      "optionsType": null,
+      "aboutURL": null,
+      "icons": {},
+      "iconURL": null,
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "Multi-process staged rollout",
+        "description": "Staged rollout of Firefox multi-process feature.",
+        "creator": null,
+        "homepageURL": null
+      },
+      "visible": true,
+      "active": true,
+      "userDisabled": false,
+      "appDisabled": false,
+      "descriptor": "c:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi",
+      "installDate": 1462255591117,
+      "updateDate": 1462255591117,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": true,
+      "skinnable": false,
+      "size": 4782,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": false,
+      "hasBinaryComponents": false,
+      "strictCompatibility": false,
+      "locales": [],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "46.0.1",
+          "maxVersion": "46.0.1"
+        }
+      ],
+      "targetPlatforms": [],
+      "multiprocessCompatible": false,
+      "seen": true
+    },
+    {
+      "id": "firefox@getpocket.com",
+      "syncGUID": "Mw2sN3ZGUgT6",
+      "location": "app-system-defaults",
+      "version": "1.0",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": null,
+      "updateKey": null,
+      "optionsURL": null,
+      "optionsType": null,
+      "aboutURL": null,
+      "icons": {},
+      "iconURL": null,
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "Pocket",
+        "description": "When you find something you want to view later, put it in Pocket.",
+        "creator": null,
+        "homepageURL": null
+      },
+      "visible": true,
+      "active": true,
+      "userDisabled": false,
+      "appDisabled": false,
+      "descriptor": "c:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi",
+      "installDate": 1462255591166,
+      "updateDate": 1462255591166,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": true,
+      "skinnable": false,
+      "size": 893271,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": false,
+      "hasBinaryComponents": false,
+      "strictCompatibility": false,
+      "locales": [],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "46.0.1",
+          "maxVersion": "46.0.1"
+        }
+      ],
+      "targetPlatforms": [],
+      "multiprocessCompatible": false,
+      "seen": true
+    },
+    {
+      "id": "loop@mozilla.org",
+      "syncGUID": "JLVLMTxMFiQx",
+      "location": "app-system-defaults",
+      "version": "1.2.6",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": null,
+      "updateKey": null,
+      "optionsURL": null,
+      "optionsType": null,
+      "aboutURL": null,
+      "icons": {},
+      "iconURL": null,
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "Firefox Hello",
+        "description": "Web sharing for Firefox",
+        "creator": "Mozilla",
+        "homepageURL": null
+      },
+      "visible": true,
+      "active": true,
+      "userDisabled": false,
+      "appDisabled": false,
+      "descriptor": "c:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\loop@mozilla.org.xpi",
+      "installDate": 1462255591320,
+      "updateDate": 1462255591320,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": true,
+      "skinnable": false,
+      "size": 4185194,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": false,
+      "hasBinaryComponents": false,
+      "strictCompatibility": false,
+      "locales": [],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "46.0a1",
+          "maxVersion": "46.*"
+        },
+        {
+          "id": "xpcshell@tests.mozilla.org",
+          "minVersion": "0",
+          "maxVersion": "10"
+        }
+      ],
+      "targetPlatforms": [],
+      "multiprocessCompatible": false,
+      "seen": true
+    },
+    {
+      "id": "{972ce4c6-7e08-4474-a285-3208198ce6fd}",
+      "syncGUID": "8MdAy3b6DJhq",
+      "location": "app-global",
+      "version": "46.0.1",
+      "type": "theme",
+      "internalName": "classic/1.0",
+      "updateURL": null,
+      "updateKey": null,
+      "optionsURL": null,
+      "optionsType": null,
+      "aboutURL": null,
+      "icons": {
+        "32": "icon.png",
+        "48": "icon.png"
+      },
+      "iconURL": null,
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "Default",
+        "description": "The default theme.",
+        "creator": "Mozilla",
+        "homepageURL": null,
+        "contributors": [
+          "Mozilla Contributors"
+        ]
+      },
+      "visible": true,
+      "active": true,
+      "userDisabled": false,
+      "appDisabled": false,
+      "descriptor": "c:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi",
+      "installDate": 1462255591116,
+      "updateDate": 1462255591116,
+      "applyBackgroundUpdates": 1,
+      "skinnable": true,
+      "size": 22012,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": false,
+      "hasBinaryComponents": false,
+      "strictCompatibility": true,
+      "locales": [],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "46.0.1",
+          "maxVersion": "46.0.1"
+        }
+      ],
+      "targetPlatforms": [],
+      "seen": true
+    },
+    {
+      "id": "fiddlerhook@fiddler2.com",
+      "syncGUID": "cuyEZaw89wDZ",
+      "location": "winreg-app-global",
+      "version": "2.6.0.4",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": null,
+      "updateKey": null,
+      "optionsURL": null,
+      "optionsType": null,
+      "aboutURL": "chrome://fiddlerhook/content/about.xul",
+      "icons": {},
+      "iconURL": "chrome://fiddlerhook/content/fiddlerhook.png",
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "FiddlerHook",
+        "description": "Integrate Fiddler into Firefox",
+        "creator": "Telerik",
+        "homepageURL": "http://fiddler2.com/r/?FIDDLERHOOKHELP"
+      },
+      "visible": true,
+      "active": false,
+      "userDisabled": true,
+      "appDisabled": true,
+      "descriptor": "C:\\Program Files (x86)\\Fiddler2\\FiddlerHook",
+      "installDate": 1448420148564,
+      "updateDate": 1448420148564,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": false,
+      "skinnable": false,
+      "size": 33900,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": true,
+      "hasBinaryComponents": false,
+      "strictCompatibility": false,
+      "locales": [],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "4.0",
+          "maxVersion": "42.*"
+        }
+      ],
+      "targetPlatforms": [],
+      "multiprocessCompatible": false,
+      "signedState": 0,
+      "seen": true
+    },
+    {
+      "id": "{1E2593B2-E106-4697-BCE7-A9D30DE05D73}",
+      "syncGUID": "XcvAvML4jWkh",
+      "location": "winreg-app-global",
+      "version": "9.4.17",
+      "type": "extension",
+      "internalName": null,
+      "updateURL": "https://www.httpwatch.com/update_ff/?app_id=%APP_ID%&cur_ver=%APP_VERSION%&rev_ver=%ITEM_MAXAPPVERSION%&old_ver=%ITEM_VERSION%",
+      "updateKey": null,
+      "optionsURL": null,
+      "optionsType": null,
+      "aboutURL": null,
+      "icons": {},
+      "iconURL": "chrome://httpwatch/content/install.png",
+      "icon64URL": null,
+      "defaultLocale": {
+        "name": "HttpWatch Professional Edition",
+        "description": "HttpWatch is an HTTP sniffer and debugger for Firefox. (For updates go to http://www.httpwatch.com/download/)",
+        "creator": "Simtec Limited",
+        "homepageURL": "http://www.httpwatch.com"
+      },
+      "visible": true,
+      "active": false,
+      "userDisabled": true,
+      "appDisabled": true,
+      "descriptor": "C:\\Program Files (x86)\\HttpWatch\\Firefox",
+      "installDate": 1488175586687,
+      "updateDate": 1488175586687,
+      "applyBackgroundUpdates": 1,
+      "bootstrap": false,
+      "skinnable": false,
+      "size": 90385174,
+      "sourceURI": null,
+      "releaseNotesURI": null,
+      "softDisabled": false,
+      "foreignInstall": true,
+      "hasBinaryComponents": true,
+      "strictCompatibility": false,
+      "locales": [],
+      "targetApplications": [
+        {
+          "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+          "minVersion": "28.0",
+          "maxVersion": "35.*"
+        }
+      ],
+      "targetPlatforms": [
+        {
+          "os": "WINNT",
+          "abi": "x86-msvc"
+        }
+      ],
+      "multiprocessCompatible": false,
+      "signedState": 0,
+      "seen": true
+    }
+  ]
+}

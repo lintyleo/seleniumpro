@@ -1,0 +1,43 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#coba-urlbar-icon{
+  list-style-image: url("chrome://coba/skin/logo-16-bw.png");
+}
+
+#coba-urlbar-switch[engine="fx"] .coba-status-image {
+  list-style-image: url("chrome://coba/skin/engine-fx.png");
+}
+
+#coba-urlbar-switch[engine="ie"] .coba-status-image {
+  list-style-image: url("chrome://coba/skin/engine-ie.png");
+}
+
+#coba-urlbar-switch {
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+  margin-top: -1px;
+  margin-bottom: -1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+/* treechildren checkbox */
+
+treechildren::-moz-tree-checkbox {
+  list-style-image: url("data:image/gif;base64,R0lGODlhEAAOALMAAAAAAISChMTCxPz%2B%2FAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAAALAAAAAAQAA4AAwQXEMhJq704681zCF0wfFwgkCXYrWzrbhEAOw%3D%3D") !important;
+}
+treechildren::-moz-tree-checkbox(checked) {
+  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8%2F9hAAABGUlEQVR42mNkoBAwjhqA3YDcbR7snH%2Ble7n5uKNevX%2FDeOvSg00P3r9uvN1%2F%2ByVQ%2BitBA0q3JE31s3bO%2BsLyneHm24cMl27dYDi9%2BuKuy7NvlQCl7yEbgtWApkO5H0wN9fnf%2FfrEcO%2F1E4Zbz%2B4zXNx34%2BelluvZQOkdQPwUrwE5G2M%2Bqegr8n7%2B8ZXh%2BbtXDPdfPWW4vu%2F27weTnvQApZcB8RW8Brg2WS6VtZCJ%2Bs3yh%2BHNpw8MDx8%2BZbiz5P7jX6d%2FLyHKAIVEBWU%2BdvYZjKKMdh8%2FfWZ8dvzVi1%2FXfx9k%2BMywDyi9i6AXgIALiBWB2AyIlaFid4D4FBDfB%2BLvhAwAAU4gFgRiASj%2FAxC%2FA%2BIfBKORFDDwBgAAWtdxEQkZYoQAAAAASUVORK5CYII%3D") !important;
+}
+#coba-identity-popup-icon {
+  height: 64px;
+  width: 64px;
+  padding: 0;
+  list-style-image: url("chrome://coba/skin/identity.png");
+  -moz-image-region: rect(0px, 64px, 64px, 0px);
+}
+#coba-identity-popup-content-box > .identity-popup-label {
+  padding-bottom: 18px;
+}
+#coba-identity-popup-always-ie-checkbox {
+  -moz-padding-start: 15px;
+}

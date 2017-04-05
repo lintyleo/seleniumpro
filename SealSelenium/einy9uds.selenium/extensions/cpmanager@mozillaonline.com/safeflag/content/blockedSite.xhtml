@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html [
+        <!ENTITY % htmlDTD PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+        %htmlDTD;
+        <!ENTITY % safeflagDTD SYSTEM "chrome://cmsafeflag/locale/safeflag.dtd">
+        %safeflagDTD;
+        ]>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<html xmlns="http://www.w3.org/1999/xhtml" class="blacklist">
+<head>
+    <link rel="icon" type="image/png" id="favicon" href="chrome://global/skin/icons/blacklist_favicon.png"/>
+    <script type="application/javascript"><![CDATA[
+      // Error url MUST be formatted like this:
+      //   about:blocked?e=error_code&u=url
+
+      // Note that this file uses document.documentURI to get
+      // the URL (with the format from above). This is because
+      // document.location.href gets the current URI off the docshell,
+      // which is the URL displayed in the location bar, i.e.
+      // the URI that the user attempted to load.
+
+      function getErrorCode()
+      {
+        var url = document.documentURI;
+        var error = url.search(/e\=/);
+        var duffUrl = url.search(/\&u\=/);
+        return decodeURIComponent(url.slice(error + 2, duffUrl));
+      }
+
+      function getURL()
+      {
+        var url = document.documentURI;
+        var match = url.match(/&u=([^&]+)&/);
+
+        // match == null if not found; if so, return an empty string
+        // instead of what would turn out to be portions of the URI
+        if (!match)
+          return "";
+
+        url = decodeURIComponent(match[1]);
+
+        // If this is a view-source page, then get then real URI of the page
+        if (url.startsWith("view-source:"))
+          url = url.slice(12);
+        return url;
+      }
+
+      /**
+       * Attempt to get the hostname via document.location.  Fail back
+       * to getURL so that we always return something meaningful.
+       */
+      function getHostString()
+      {
+        try {
+          return document.location.hostname;
+        } catch (e) {
+          return getURL();
+        }
+      }
+
+      function initPage()
+      {
+        document.getElementById("container").classList.add(getErrorCode());
+        Array.prototype.forEach.call(
+          document.querySelectorAll(".site-host"), function(aElem) {
+          aElem.textContent = getHostString();
+        });
+      }
+    ]]>
+
+
+
+    </script>
+    <style type="text/css">
+      html {
+        background-color: #D6D6D6;
+        font-size: 62.5%;
+        font-family: arial,微软雅黑,宋体;
+      }
+
+      #container {
+        position: relative;
+        border: 1px #AFAFAF solid;
+        background-color: #F6F6F6;
+        width: 80rem;
+        height: 45.9rem;
+        margin: 4rem auto;
+      }
+
+      #container > * {
+        padding: 0 2.4rem;
+      }
+
+      #container.phishingBlocked .malware,
+      #container.phishingBlocked .unwanted,
+      #container.malwareBlocked .phishing,
+      #container.malwareBlocked .unwanted,
+      #container.unwantedBlocked .phishing,
+      #container.unwantedBlocked .malware {
+        display: none;
+      }
+
+      .header {
+        background: #CD3426 url("chrome://cmsafeflag/skin/alert.png") no-repeat scroll 10rem center;
+        font-size: 3.4rem;
+        color: #FFFFFF;
+        text-align: center;
+        height: 16rem;
+        line-height: 16rem;
+      }
+      #container.unwantedBlocked > .header {
+        background-image: none;
+      }
+
+      .header .type {
+        color: #FFF000;
+        margin-left: 1rem;
+      }
+
+      .description > div.content {
+        font-size: 1.8rem;
+        color: #4B4B4B;
+        line-height: 2.8rem;
+        padding: 1.8rem 5.1rem 3rem;
+      }
+
+      .description span.site-host {
+        padding: 0 1rem;
+      }
+
+      .ops #getMeOutButton {
+        float: left;
+        margin-left: 23.9rem;
+        width: 27.5rem;
+        height: 6rem;
+        line-height: 6rem;
+        cursor: pointer;
+        font-size: 2.4rem;
+        text-align: center;
+        background-color: #5ABD14;
+        border: 1px solid #51B40B;
+        border-radius: 3px;
+        color: #FFFFFF;
+      }
+
+      .ops #getMeOutButton:hover {
+        background-color: #4CAE09;
+        border-color: #45A601;
+        box-shadow: 1px 1px 1px #D7D7D7;
+      }
+
+      .ops #ignoreWarningButton {
+        color: #A0A0A0;
+        font-size: 1.8rem;
+        margin-left: 1rem;
+        line-height: 6rem;
+      }
+
+      .footer {
+        box-sizing: border-box;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        color: #7D7D7D;
+        font-size: 1.4rem;
+        line-height: 6.2rem;
+        padding: 0 2.4rem !important;
+      }
+
+      .footer .partner {
+        padding-left: 3rem;
+        display: inline-block;
+      }
+
+      .footer .alliance {
+        background: url("chrome://cmsafeflag/skin/alliance.png") no-repeat scroll 0.3rem center;
+      }
+
+      .footer .baidu {
+        background: url("chrome://cmsafeflag/skin/baidu.png") no-repeat scroll 0.3rem center;
+      }
+
+      .footer .pingan {
+        background: url("chrome://cmsafeflag/skin/pingan.png") no-repeat scroll 0.3rem center;
+      }
+
+      .footer #cnReportButton,
+      .footer #cnReportButton {
+        float: right;
+        color: #126EFD;
+      }
+
+
+
+
+    </style>
+</head>
+
+<body>
+<div id="container">
+    <div class="header">&safeflag.aboutBlocked.header;</div>
+    <div class="description">
+        <div class="content phishing">&safeflag.aboutBlocked.contentPhishing;</div>
+        <div class="content malware">&safeflag.aboutBlocked.contentMalware;</div>
+        <div class="content unwanted">&safeflag.aboutBlocked.contentUnwanted;</div>
+    </div>
+    <div class="ops">
+        <div href="#" id="getMeOutButton">&safeflag.aboutBlocked.getMeOutButton;</div>
+        <a href="#" id="ignoreWarningButton">&safeflag.aboutBlocked.ignoreWarningButton;</a>
+    </div>
+    <div class="footer">&safeflag.aboutBlocked.footer;</div>
+</div>
+<!--
+- Note: It is important to run the script this way, instead of using
+- an onload handler. This is because error pages are loaded as
+- LOAD_BACKGROUND, which means that onload handlers will not be executed.
+-->
+<script type="application/javascript">initPage();</script>
+</body>
+</html>

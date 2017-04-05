@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+	<Description about="urn:mozilla:install-manifest">
+		<em:id>cpmanager@mozillaonline.com</em:id>
+		<em:version>1.5.12</em:version>
+		<em:name>Addons Manager</em:name>
+		<em:description>To manage the addons package in Firefox.</em:description>
+		<em:creator>Mozilla Online Limited</em:creator>
+		<em:contributor>Conchshell</em:contributor>
+		<em:contributor>Ray Cheung</em:contributor>
+		<em:contributor>Xuan Xie</em:contributor>
+		<em:contributor>Jiao Feng</em:contributor>
+		<em:contributor>Rui You</em:contributor>
+		<em:homepageURL>http://www.firefox.com.cn/</em:homepageURL>
+		<em:optionsURL>chrome://cmsafeflag/content/options.xul</em:optionsURL>
+		<em:unpack>true</em:unpack>
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>29.0</em:minVersion>
+				<em:maxVersion>46.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+
+
+		<em:updateURL>http://g-fox.cn/chinaedition/addons/cpmanager-bsb/update.rdf?version=%ITEM_VERSION%</em:updateURL>
+		<em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2zWwTHIR23xreMABqMJXj1YrFowjiaBieTNqC2bE9PImSaMBxmYqrQ/UryquunGB0LJVE6tzzdioK9KFp+8ZO4eZL0fpxA9I+8mp+g3MTwqMVZD5ma3qwEGDngATaJwlcWY5xmrWcWNUgogP7n6JYuw0Giuc7crDNK3n1/nCbhwIDAQAB</em:updateKey>
+		<em:localized>
+			<Description>
+				<em:locale>zh-CN</em:locale>
+				<em:name>附加组件管理器</em:name>
+				<em:description>用来管理火狐的附加组件系统。</em:description>
+				<em:creator>Mozilla Online Limited</em:creator>
+				<em:homepageURL>http://www.firefox.com.cn/</em:homepageURL>
+			</Description>
+		</em:localized>
+
+	</Description>
+</RDF>

@@ -1,0 +1,319 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version|0.17|$
+Arch|x86-msvc|$
+
+[PLUGINS]
+nppdf32.dll|$
+C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AIR\nppdf32.dll|$
+15.23.20053.15062|$
+1482516654000|0|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape 15.23.20053|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+npDapCtrl.dll|$
+C:\Users\Public\Thunder Network\XMP5\Addins\npDapCtrl.dll|$
+3.3.1.17|$
+1479202462000|0|0|0|$
+Thunder DapCtrl NPAPI Plugin|$
+Thunder DapCtrl NPAPI Plugin|$
+1
+0|application/x-thunder-dapctrl|Thunder DapCtrl Plugin|*|$
+NPWizWebCapture.dll|$
+C:\Program Files (x86)\WizNote\NPWizWebCapture.dll|$
+4.0.35.1|$
+1483500554000|0|0|0|$
+Wiz|$
+Wiz|$
+1
+0|application/x-wizbrother-wiz-ax|Wiz|ax|$
+npWacomTabletPlugin.dll|$
+C:\Program Files (x86)\TabletPlugins\npWacomTabletPlugin.dll|$
+2.1.0.7|$
+1395762522000|0|0|0|$
+Plugin for Wacom tablets.|$
+WacomTabletPlugin|$
+1
+0|application/x-wacomtabletplugin|WacomTabletPlugin||$
+npGoogleUpdate3.dll|$
+C:\Program Files (x86)\Google\Update\1.3.28.15\npGoogleUpdate3.dll|$
+1.3.28.15|$
+1448514361594|0|0|0|$
+Google Update|$
+Google Update|$
+2
+0|application/x-vnd.google.update3webcontrol.3|||$
+1|application/x-vnd.google.oneclickctrl.9|||$
+nptxftnWebKit.dll|$
+C:\Program Files (x86)\QQMailPlugin\nptxftnWebKit.dll|$
+1.0.0.4|$
+1365408134000|0|0|0|$
+Tencent FTN plug-in|$
+Tencent FTN plug-in|$
+1
+0|application/txftn-webkit|nptxftn||$
+npQQMailWebKit.dll|$
+C:\Program Files (x86)\QQMailPlugin\npQQMailWebKit.dll|$
+1.0.0.22|$
+1366877940000|0|0|0|$
+QQMail plugin for WebKit #1.0.0.22|$
+QQMail Plugin|$
+2
+0|application/x-tencent-qmail-webkit|QQMailPlugin for webkit||$
+1|application/x-tencent-qmail|QQMailPlugin for webkit||$
+npisecurity-pab.dll|$
+C:\Program Files (x86)\PINGAN-iSecurity 2.4\npisecurity-pab.dll|$
+2.4.25.0|$
+1372988170000|0|0|0|$
+SA-iSecurity Plug-in for PAB|$
+SA-iSecurity Plug-in for PAB|$
+1
+0|application/x-vnd-sa-isecurity-pab|SA-iSecurity||$
+npSSOAxCtrlForPTLogin.dll|$
+C:\Program Files (x86)\Common Files\Tencent\TXSSO\1.2.5.14\Bin\npSSOAxCtrlForPTLogin.dll|$
+1.0.1.16|$
+1477918340000|0|0|0|$
+QQ QuickLogin Helper|$
+Tencent SSO Platform|$
+1
+0|application/nptxsso|TXSSO||$
+npQzoneMusic.dll|$
+C:\Program Files (x86)\Tencent\QQMusic\QzoneMusic\npQzoneMusic.dll|$
+9.51.3087.226|$
+1456451578000|0|0|0|$
+QQÒôÀÖ²¥·Å¿Ø¼þ|$
+QQÒôÀÖ²¥·Å¿Ø¼þ|$
+1
+0|application/tecent-qzonemusic-plugin|This plug-in is transfers of QzoneMusic when opening Qzone in a web page with Firefox.|rts|$
+npQQPhotoDrawEx.dll|$
+C:\Program Files (x86)\Tencent\Qzone\npQQPhotoDrawEx.dll|$
+2.47.312.813|$
+1376385610000|0|0|0|$
+npQQPhotoDrawEx Module|$
+npQQPhotoDrawEx|$
+1
+0|application/tencent-qqphotodrawex2-plugin||rts|$
+npXFMiniDLPlugin.dll|$
+C:\Program Files (x86)\Common Files\Tencent\QQMiniDL\60\Browser\npXFMiniDLPlugin.dll|$
+1.4.50.400|$
+1398413128000|0|0|0|$
+QQMiniDL Plugin|$
+QQMiniDL Plugin|$
+1
+0|application/npxf-qqminidl|npXFPlug|dll|$
+npactivex.dll|$
+C:\Program Files (x86)\Common Files\Tencent\Npchrome\npactivex.dll|$
+6.0.1.1|$
+1486689608763|0|0|0|$
+Tencent QQ CPHelper plugin for Chrome|$
+Tencent QQ|$
+1
+0|application/qscall-plugin|DLL|dll|$
+NPSPWRAP.DLL|$
+C:\PROGRA~2\MICROS~1\Office15\NPSPWRAP.DLL|$
+15.0.4514.1000|$
+1390335104000|0|0|0|$
+The plugin allows you to have a better experience with Microsoft SharePoint|$
+Microsoft Office 2013|$
+2
+0|application/x-sharepoint|SharePoint Plug-in for Firefox||$
+1|application/x-sharepoint-uc|||$
+npctrl.dll|$
+C:\Program Files (x86)\Microsoft Silverlight\5.1.50901.0\npctrl.dll|$
+5.1.50901.0|$
+1472649730000|0|0|0|$
+5.1.50901.0|$
+Silverlight Plug-In|$
+2
+0|application/x-silverlight|npctrl|scr|$
+1|application/x-silverlight-2|||$
+npMeetingJoinPluginOC.dll|$
+C:\Program Files (x86)\Mozilla Firefox\plugins\npMeetingJoinPluginOC.dll|$
+15.0.4849.1000|$
+1473730202000|0|0|0|$
+The plugin allows you to have a better experience with Microsoft Lync|$
+Microsoft Office 2013|$
+1
+0|application/vnd.microsoft.communicator.ocsmeeting|Lync Plug-in for Firefox||$
+nppdf32.dll|$
+C:\Program Files (x86)\Mozilla Firefox\plugins\nppdf32.dll|$
+15.23.20053.15062|$
+1482516654000|0|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape 15.23.20053|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+nphttpwatchproff.dll|$
+C:\Program Files (x86)\HttpWatch\Firefox\components\nphttpwatchproff.dll|$
+9.4.17.0|$
+1421755200000|0|0|0|$
+HttpWatch Professional - HTTP Viewer for Firefox|$
+HttpWatch Professional|$
+1
+0|application/x-httpwatch-addon||*|$
+np_spdbsign_nie_v5.dll|$
+C:\Program Files (x86)\SPDB Ebank Security Suite\np_spdbsign_nie_v5.dll|$
+1.0.0.4|$
+1381985448000|0|0|0|$
+PowerSign Plug-in for SPDB|$
+PowerSign Plug-in for SPDB|$
+1
+0|application/x-vnd-csii-powersign-spdb|nppowersign||$
+np_spdbsafe_nie_v5.dll|$
+C:\Program Files (x86)\SPDB Ebank Security Suite\np_spdbsafe_nie_v5.dll|$
+2.4.51.0|$
+1395720840000|0|0|0|$
+SA-iSecurity Plug-in for SPDBANK|$
+SA-iSecurity Plug-in for SPDBANK|$
+1
+0|application/x-vnd-sa-isecurity-spdbank|SA-iSecurity||$
+npCgbEditChrome.dll|$
+C:\Program Files (x86)\CgbOnlineBanking\SecurityControls\npCgbEditChrome.dll|$
+2.4.0.0|$
+1409885388640|0|0|0|$
+CGB Online Banking Security Chrome Plugin|$
+CGB Online Banking Security Chrome Plugin|$
+1
+0|application/x-cgbeditchrome-plugin|npCgbEditChrome|rts|$
+npCgbEditFirefox.dll|$
+C:\Program Files (x86)\CgbOnlineBanking\SecurityControls\npCgbEditFirefox.dll|$
+2.4.0.0|$
+1409885389921|0|0|0|$
+CGB Online Banking Security Firefox Plugin|$
+CGB Online Banking Security Firefox Plugin|$
+1
+0|application/x-cgbeditfirefox-plugin|npCgbEditFirefox|rts|$
+npyunwebdetect.dll|$
+C:\Users\Linty\AppData\Roaming\baidu\BaiduYunGuanjia\npyunwebdetect.dll|$
+5.5.2.0|$
+1484203682141|0|0|0|$
+YunWebDetect|$
+BaiduYunGuanjia Application|$
+1
+0|application/bd-npyunwebdetect-plugin|||$
+NPComBrg701.dll|$
+C:\WINDOWS\system32\itruscert\NPComBrg701.dll|$
+1.0.2011.701|$
+1311580152000|0|0|0|$
+iTrusPTA&XEnroll hwPTA,IEnroll,UKeyInstalls for FireFox,version=1.0.0.2|$
+iTrusChina iTrusPTA,XEnroll,iEnroll,hwPTA,UKeyInstalls Firefox Plugin|$
+6
+0|application/pta.itruspta.version.1|PTA|*|$
+1|application/cenroll.cenroll.version.1|CEnroll||$
+2|application/itrusenroll.certenroll.version.1|IEnroll||$
+3|application/hwpta.itrushwpta|hwPTA||$
+4|application/hwwdkey.installwdkey|hwWDkey||$
+5|application/hwepass2001.installepass2001|HwEpass2001||$
+npalidcp.dll|$
+C:\Program Files (x86)\alipay\aliedit\5.1.0.3754\npalidcp.dll|$
+1.0.0.1|$
+1404391014000|0|0|0|$
+npalidcp|$
+Alipay webmod control|$
+1
+0|application/alidcp|npalidcp| |$
+npaliedit.dll|$
+C:\Program Files (x86)\alipay\aliedit\5.1.0.3754\npaliedit.dll|$
+1.3.0.2|$
+1404391014000|0|0|0|$
+npaliedit|$
+Alipay security control|$
+1
+0|application/aliedit|npaliedit| |$
+npalicdo.dll|$
+C:\Program Files (x86)\alipay\aliedit\5.1.0.3754\npalicdo.dll|$
+1.0.0.4|$
+1421228434000|0|0|0|$
+npalicdo|$
+npalicdo plugin|$
+1
+0|application/npalicdo|npalicdo|dll|$
+npAlipaydhc.dll|$
+C:\Program Files (x86)\alipay\aliedit\5.1.0.3754\npAlipaydhc.dll|$
+1.0.6.0|$
+1421228436000|0|0|0|$
+Alipay Internet Health Control|$
+Alipay Security Payment Client Suit|$
+1
+0|application/x-aliinethealth-plugin|npAliInetHealth.dll|*|$
+npAliSecCtrl.dll|$
+C:\Program Files (x86)\alipay\aliedit\5.1.0.3754\npAliSecCtrl.dll|$
+2.0.2.0|$
+1421228438000|0|0|0|$
+Alipay Security Control|$
+Alipay Security Control 3|$
+1
+0|application/x-alisecctrl-plugin|npAliSecCtrl.dll|*|$
+NPSWF32_23_0_0_185.dll|$
+C:\WINDOWS\SysWoW64\Macromed\Flash\NPSWF32_23_0_0_185.dll|$
+23.0.0.185|$
+1476847381770|0|0|0|$
+Shockwave Flash 23.0 r0|$
+Shockwave Flash|$
+2
+0|application/x-shockwave-flash|Adobe Flash movie|swf|$
+1|application/futuresplash|FutureSplash movie|spl|$
+npxunlei1.0.0.2.dll|$
+C:\Program Files (x86)\Thunder Network\Thunder9\Data\npxunlei1.0.0.2.dll|$
+1.0.0.2|$
+1486691259804|0|0|0|$
+Xunlei scriptability Plugin|$
+XunLei Plugin|$
+1
+0|application/np_xunlei_plugin|np_xunlei_plugin|*|$
+npxluser2.0.2.3.dll|$
+C:\Program Files (x86)\Common Files\Thunder Network\UserAgent\npxluser2.0.2.3.dll|$
+2.0.2.3|$
+1486691259769|0|0|0|$
+Xunlei User scriptability Plugin,version= 2.0.2.3|$
+XunLei User Plugin|$
+1
+0|application/npxluser_plugin|||$
+npalicdo.dll|$
+C:\Users\Linty\AppData\Roaming\alipay\cf\npalicdo.dll|$
+1.0.0.4|$
+1409716928000|0|0|0|$
+npalicdo|$
+npalicdo plugin|$
+1
+0|application/npalicdo|npalicdo|dll|$
+npqqwebgame.dll|$
+C:\Users\Linty\AppData\Roaming\Tencent\WebGamePlugin\1.0.4.3\npqqwebgame.dll|$
+1.0.4.3|$
+1445322560000|0|0|0|$
+QQWebGamePlugin Pro|$
+QQGamePlugin Pro|$
+1
+0|application/npqqwebgame|QQWebGamePlugin Pro|rts|$
+npcoba32.dll|$
+C:\Users\Linty\AppData\Roaming\Mozilla\Firefox\Profiles\einy9uds.selenium\extensions\coba@mozilla.com.cn\plugins\npcoba32.dll|$
+1.0.0.1|$
+1450689110004|0|0|1|$
+COBA Plugin DLL|$
+China Online Banking Assistant|$
+1
+0|application/coba||*|$
+
+[INVALID]
+C:\Program Files (x86)\Microsoft Silverlight\5.1.50901.0\npctrlui.dll|$
+1472649730000|$
+C:\Program Files (x86)\alipay\aliedit\5.1.0.3754\npalicdo64.dll|$
+1421228434000|$
+C:\Program Files (x86)\alipay\aliedit\5.1.0.3754\npAlipaydhc64.dll|$
+1421228438000|$
+C:\Program Files (x86)\alipay\aliedit\5.1.0.3754\npAliSecCtrl64.dll|$
+1421228440000|$

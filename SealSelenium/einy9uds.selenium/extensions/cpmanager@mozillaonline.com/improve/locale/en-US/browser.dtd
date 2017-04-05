@@ -1,0 +1,15 @@
+<!ENTITY cp.history.settings.label "Auto Clear History Settings">
+        <!ENTITY cp.history.label "History">
+        <!ENTITY cp.clearHistory.label "Auto Clear History:">
+        <!ENTITY cp.clearHistory.accesskey "D">
+
+        <!ENTITY cp.clearRecentHistory.none.label      "Never clear history unless manually">
+        <!ENTITY cp.clearRecentHistory.daily.label     "Over 1 day">
+        <!ENTITY cp.clearRecentHistory.weekly.label    "Over 1 week">
+        <!ENTITY cp.clearRecentHistory.monthly.label   "Over 1 month">
+        <!ENTITY cp.clearRecentHistory.querterly.label "Over 3 months">
+        <!ENTITY cp.clearRecentHistory.yearly.label    "Over 1 year">
+
+        <!ENTITY cp.clearRecentHistory.clearOnClose.label "Always clear history when Firefox closes">
+
+        <!ENTITY cp.mozillaComCn.label "Community Website">

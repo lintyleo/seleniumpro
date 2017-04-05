@@ -1,0 +1,9 @@
+<!ENTITY title "附加组件管理器选项">
+
+        <!ENTITY generalpane.label "基本功能">
+        <!ENTITY c-enable.label "启用地址栏安全标识">
+        <!ENTITY c-safe.label "检测为安全的网址，当前地址栏使用绿色背景">
+        <!ENTITY c-unsafe.label "检测为不安全的网址，当前地址栏使用红色背景">
+
+        <!ENTITY c-enableurl2qr.label "启用地址栏二维码">
+        <!ENTITY c-enablegesture.label "启用拖拽手势">

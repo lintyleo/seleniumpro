@@ -1,0 +1,4 @@
+<!ENTITY mo-url2qr.generateQR "生成当前网址的二维码">
+        <!ENTITY mo-url2qr.instructions "扫一扫，直接在手机上打开">
+        <!ENTITY mo-url2qr.instructions1 "推荐扫描工具">
+        <!ENTITY mo-url2qr.instructions2 "或使用微信扫一扫等二维码扫描工具">

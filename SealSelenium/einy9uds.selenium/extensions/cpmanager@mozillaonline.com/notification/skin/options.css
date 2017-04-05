@@ -1,0 +1,9 @@
+#cpmanagerOptions { min-height: 430px; min-width: 530px; }
+
+#addon { min-height: 270px; min-width: 480px; }
+
+treechildren::-moz-tree-row(selected)            { background-color: #44f; }
+treechildren::-moz-tree-row(odd)                 { background-color: #eee; }
+treechildren::-moz-tree-row(odd, selected)       { background-color: #44f; }
+treechildren::-moz-tree-cell-text(selected)      { color: #fff; }
+treechildren::-moz-tree-cell-text(odd, selected) { color: #fff; }

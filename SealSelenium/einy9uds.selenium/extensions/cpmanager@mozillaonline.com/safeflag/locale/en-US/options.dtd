@@ -1,0 +1,9 @@
+<!ENTITY title "CPManager Options">
+
+        <!ENTITY generalpane.label "General">
+        <!ENTITY c-enable.label "Enable Safe Flag">
+        <!ENTITY c-safe.label "Green address bar for safe sites">
+        <!ENTITY c-unsafe.label "Red address bar for unsafe sites">
+
+        <!ENTITY c-enableurl2qr.label "Enable QR Code">
+        <!ENTITY c-enablegesture.label "Enable drag and drop handling">

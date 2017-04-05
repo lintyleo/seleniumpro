@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="3" name="Failed suite [Ranzhi Test Suite]">
+    <listeners>
+        <listener class-name="ExtentReporterNgListener"/>
+    </listeners>
+    <test name="Ranzhi tests(failed)">
+        <classes>
+            <class name="RanzhiAdvancedTests">
+                <methods>
+                    <include name="tearDown"/>
+                    <include name="setUp"/>
+                    <include name="testAddMember"/>
+                </methods>
+            </class> <!-- RanzhiAdvancedTests -->
+        </classes>
+    </test> <!-- Ranzhi tests(failed) -->
+</suite> <!-- Failed suite [Ranzhi Test Suite] -->

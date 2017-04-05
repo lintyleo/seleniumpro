@@ -1,0 +1,114 @@
+content   cmtracking         tracking/content/  contentaccessible=yes
+locale    cmtracking   en-US tracking/locale/en-US/
+locale    cmtracking   zh-CN tracking/locale/zh-CN/
+
+resource  cmtracking         tracking/modules/
+resource  tracking-components        components/binary/
+
+resource  cpmanager-clv         cpmanager-clv/modules/
+
+resource  cmsafeflag               safeflag/modules/
+
+content   cmsafeflag               safeflag/content/  contentaccessible=yes
+locale    cmsafeflag  en-US        safeflag/locale/en-US/
+locale    cmsafeflag  zh-CN        safeflag/locale/zh-CN/
+skin      cmsafeflag  classic/1.0  safeflag/skin/
+
+content  cmnotification                 notification/content/
+skin     cmnotification   classic/1.0   notification/skin/
+locale   cmnotification   en-US         notification/locale/en-US/
+locale   cmnotification   zh-CN         notification/locale/zh-CN/
+overlay   chrome://browser/content/browser.xul          chrome://cmsafeflag/content/overlay.xul
+override  chrome://safeflag/content/overlay.xul         chrome://cmsafeflag/content/safeflag_blank.xul
+override  chrome://browser/content/blockedSite.xhtml    chrome://cmsafeflag/content/blockedSite.xhtml
+
+style     chrome://browser/content/browser.xul          chrome://cmsafeflag/skin/linux/overlay.css  os=Linux
+style     chrome://browser/content/browser.xul          chrome://cmsafeflag/skin/mac/overlay.css    os=Darwin
+
+overlay   chrome://cmsafeflag/content/options.xul            chrome://cmnotification/content/optionsOverlay.xul      appversion>=4.0
+
+overlay   chrome://browser/content/browser.xul               chrome://cmnotification/content/ff-overlay.xul          appversion>=4.0
+override  chrome://addonnotification/content/ff-overlay.xul  chrome://cmnotification/content/notification_blank.xul
+style     chrome://browser/content/browser.xul               chrome://cmnotification/skin/overlay-win.css            os=WINNT
+
+content  cmpfs                                  pfs/content/
+overlay  chrome://browser/content/browser.xul   chrome://cmpfs/content/overlay-browser.xul  os=WINNT
+
+override chrome://mozapps/content/plugins/pluginInstallerService.js   chrome://cmpfs/content/plugins/pluginInstallerService.js
+
+locale   cmpfs  en-US        pfs/locale/en-US/
+locale   cmpfs  zh-CN        pfs/locale/zh-CN/
+
+resource cmpfs  pfs/modules/
+
+skin     cmpfs            classic/1.0   pfs/skin/
+skin     cmpfs-os         classic/1.0   pfs/skin/windows/
+skin     cmpfs-os         classic/1.0   pfs/skin/osx/       os=Darwin
+skin     cmpfs-os         classic/1.0   pfs/skin/linux/     os=Linux
+
+content  cmimprove                   improve/content/
+locale   cmimprove     en-US         improve/locale/en-US/
+locale   cmimprove     zh-CN         improve/locale/zh-CN/
+skin     cmimprove     classic/1.0   improve/skin/
+skin     cmimprove-os  classic/1.0   improve/skin/
+skin     cmimprove-os  classic/1.0   improve/skin/mac/ os=Darwin
+skin     cmimprove-os  classic/1.0   improve/skin/mac/yosemite/ os=Darwin osversion>=10.10 appversion>=34.0
+skin     cmimprove-os  classic/1.0   improve/skin/linux/ os=Linux
+
+overlay  chrome://browser/content/browser.xul   chrome://cmimprove/content/overlay-browser.xul
+overlay  chrome://browser/content/browser.xul   chrome://cmimprove/content/gesture/overlay-browser.xul          appversion>=4.0
+overlay  chrome://browser/content/browser.xul   chrome://cmimprove/content/sanitize/overlay-browser.xul
+overlay  chrome://browser/content/browser.xul   chrome://cmimprove/content/url2qr/overlay-browser.xul
+overlay  chrome://browser/content/sanitize.xul  chrome://cmimprove/content/sanitize/overlay-sanitize.xul
+overlay  chrome://browser/content/preferences/main.xul  chrome://cmimprove/content/sanitize/overlay-preferences-main.xul
+overlay  about:preferences  chrome://cmimprove/content/sanitize/overlay-preferences-main.xul
+
+component {C40350A8-F734-4CFF-99D9-95274D408143} components/ceTracking.js
+contract @mozilla.com.cn/tracking;1 {C40350A8-F734-4CFF-99D9-95274D408143}
+category profile-after-change trackingFactoryClass @mozilla.com.cn/tracking;1
+
+overlay chrome://mozapps/content/downloads/unknownContentType.xul chrome://cmimprove/content/downloads/overlay-unknownContentType.xul
+component {44FA5595-2842-6F60-1385-B6C7AC6F118B} components/ceClearHistory.js
+contract @mozilla.com.cn/clearHistory;1 {44FA5595-2842-6F60-1385-B6C7AC6F118B}
+category profile-after-change chFactoryClass @mozilla.com.cn/clearHistory;1
+
+# z-cpmanager means very low priority
+component {eada4c5c-6b7a-486b-8492-5297ba7a189e} cpmanager-clv/components/cclv.js
+contract @mozillaonline.com/browser/cclv;1 {eada4c5c-6b7a-486b-8492-5297ba7a189e}
+category command-line-validator z-cpmanager @mozillaonline.com/browser/cclv;1
+
+component {06686705-c9e6-464d-b34f-3c4dc2d5b183} components/mozCNGuard.js
+contract @mozillaonline.com/moz-cn-guard;1 {06686705-c9e6-464d-b34f-3c4dc2d5b183}
+category profile-after-change mozCNGuard @mozillaonline.com/moz-cn-guard;1
+
+overlay  chrome://browser/content/browser.xul               chrome://cmtracking/content/dataChoices/overlay-browser.xul
+overlay  chrome://browser/content/preferences/advanced.xul  chrome://cmtracking/content/dataChoices/overlay-preferences.xul
+overlay  chrome://browser/content/preferences/sync.xul      chrome://cmimprove/content/fxa/overlay-preferences-sync.xul
+
+overlay  about:preferences  chrome://cmtracking/content/dataChoices/overlay-preferences.xul
+
+overlay  about:preferences                       chrome://cmimprove/content/fxa/overlay-preferences-sync.xul
+overlay  about:preferences?entrypoint=abouthome  chrome://cmimprove/content/fxa/overlay-preferences-sync.xul
+overlay  about:preferences?entrypoint=menubar    chrome://cmimprove/content/fxa/overlay-preferences-sync.xul
+overlay  about:preferences?entrypoint=menupanel  chrome://cmimprove/content/fxa/overlay-preferences-sync.xul
+overlay  about:preferences?entrypoint=syncbutton chrome://cmimprove/content/fxa/overlay-preferences-sync.xul
+overlay  about:preferences?entrypoint=uitour     chrome://cmimprove/content/fxa/overlay-preferences-sync.xul
+
+style  about:addons  chrome://cmimprove/skin/hiddenWarning.css  appversion<41.0
+
+component {6E12E09F-1942-46F0-8D85-9C6B1D0E6448} components/ceTracking-old.js
+contract @mozilla.com.cn/tracking-old;1 {6E12E09F-1942-46F0-8D85-9C6B1D0E6448}
+category profile-after-change trackingFactoryClassOld @mozilla.com.cn/tracking-old;1
+
+# limit to most recent release version to prevent breakage, also not for Win8
+component {055d195f-168e-4d98-b18a-71bfbfd3f617} components/nsShellService.js          os=WINNT osversion<6.2 appversion<47.0
+component {1a80db92-3b6b-4872-968a-8711f53a09ba} components/nsShellServiceStartup.js   os=WINNT osversion<6.2 appversion<47.0
+contract @mozillaonline.com/shell-svc-startup;1 {1a80db92-3b6b-4872-968a-8711f53a09ba} os=WINNT osversion<6.2 appversion<47.0
+category profile-after-change ShellSvcStartup @mozillaonline.com/shell-svc-startup;1   os=WINNT osversion<6.2 appversion<47.0
+
+component {9a52065c-1cdc-4605-bf36-1ac1f0129bf7} improve/content/fxa/serviceSwitcher.js
+contract @mozillaonline.com/fxa-switcher;1 {9a52065c-1cdc-4605-bf36-1ac1f0129bf7}
+category profile-after-change mozCNFxaSwitcher @mozillaonline.com/fxa-switcher;1
+
+content copygif copygif/content/ contentaccessible=yes
+overlay chrome://browser/content/browser.xul chrome://copygif/content/overlay.xul

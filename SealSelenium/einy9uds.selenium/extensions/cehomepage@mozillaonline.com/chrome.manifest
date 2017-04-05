@@ -1,0 +1,56 @@
+content	cehomepage         chrome/content/	contentaccessible=yes
+locale  cehomepage  en-US  chrome/locale/en-US/
+locale  cehomepage  zh-CN  chrome/locale/zh-CN/
+
+content ceerrorpage chrome_errorpage/content/ contentaccessible=yes
+content ceerrorpage chrome_errorpage/content/
+
+overlay chrome://browser/content/browser.xul chrome://ceerrorpage/content/browserOverlay.xul
+skin      ceerrorpage  classic/1.0  chrome_errorpage/skin/
+locale    ceerrorpage   en-US       chrome_errorpage/locale/en-US/
+locale    ceerrorpage   zh-CN       chrome_errorpage/locale/zh-CN/
+
+content   ntab               chrome_ntab/content/
+resource  ntab               chrome_ntab/modules/
+skin      ntab  classic/1.0  chrome_ntab/skin/
+
+locale    ntab   en-US       chrome_ntab/locale/en-US/
+locale    ntab   zh-CN       chrome_ntab/locale/zh-CN/
+
+overlay   chrome://browser/content/browser.xul  chrome://ntab/content/ff-overlay.xul
+overlay   about:config  chrome://ntab/content/config-overlay.xul
+overlay   chrome://browser/content/preferences/sync.xul  chrome://ntab/content/preferences-sync.xul
+overlay   about:preferences                       chrome://ntab/content/preferences-sync.xul
+overlay   about:preferences?entrypoint=abouthome  chrome://ntab/content/preferences-sync.xul
+overlay   about:preferences?entrypoint=menubar    chrome://ntab/content/preferences-sync.xul
+overlay   about:preferences?entrypoint=menupanel  chrome://ntab/content/preferences-sync.xul
+overlay   about:preferences?entrypoint=syncbutton chrome://ntab/content/preferences-sync.xul
+overlay   about:preferences?entrypoint=uitour     chrome://ntab/content/preferences-sync.xul
+overlay   chrome://browser/content/sync/customize.xul    chrome://ntab/content/sync-customize.xul
+
+override  chrome://global/content/backgroundPageThumbsContent.js chrome://ntab/content/backgroundPageThumbsContent.js appversion>=27.0
+
+
+content     cehp-promo                  chrome_promo/content/
+locale      cehp-promo    en-US         chrome_promo/locale/en-US/
+locale      cehp-promo    zh-CN         chrome_promo/locale/zh-CN/
+resource    cehp-promo                  chrome_promo/modules/
+skin        cehp-promo    classic/1.0   chrome_promo/skin/
+
+overlay chrome://browser/content/browser.xul        chrome://cehp-promo/content/browser-overlay.xul
+overlay chrome://global/content/alerts/alert.xul    chrome://cehp-promo/content/alert-overlay.xul
+
+
+component {3ce0f801-b121-4a20-9188-3b92b13e9809} components/aboutNTab.js
+contract @mozilla.org/network/protocol/about;1?what=ntab {3ce0f801-b121-4a20-9188-3b92b13e9809}
+
+component {c0a76f7d-8214-4476-afe3-b34f9051cb99} components/aboutCEHome.js
+contract @mozilla.org/network/protocol/about;1?what=cehome {c0a76f7d-8214-4476-afe3-b34f9051cb99}
+
+component {eac198fa-e173-4274-8fb3-5857c6a52d10} components/cehpUpdateParam.js
+contract @mozillaonline.com/cehp-update-params;1 {eac198fa-e173-4274-8fb3-5857c6a52d10}
+category extension-update-params CEHP_PREF_TRACKING @mozillaonline.com/cehp-update-params;1
+
+component {828cb3e4-a050-4f95-8893-baa0b00da7d7} components/mozCNUtils.js
+contract @mozillaonline.com/moz-cn-utils;1 {828cb3e4-a050-4f95-8893-baa0b00da7d7}
+category profile-after-change mozCNUtils @mozillaonline.com/moz-cn-utils;1

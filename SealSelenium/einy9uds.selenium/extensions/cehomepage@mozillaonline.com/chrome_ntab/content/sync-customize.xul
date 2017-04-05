@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay [
+        <!ENTITY % ntabsyncDTD SYSTEM "chrome://ntab/locale/sync.dtd">
+        %ntabsyncDTD;
+        ]>
+<overlay id="ntabsync-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript;version=1.8" src="chrome://ntab/content/sync-customize.js"></script>
+
+    <prefpane id="sync-customize-pane">
+        <preferences id="mozCNSyncPrefs">
+            <preference id="engine.mozcn.ntab" name="services.sync.engine.mozcn.ntab" type="bool"/>
+        </preferences>
+    </prefpane>
+</overlay>

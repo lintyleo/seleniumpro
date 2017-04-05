@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://ntab/locale/overlay.dtd">
+<window id="appcenter_window"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        title="&cehptitle;">
+    <html:link rel="icon" href="chrome://ntab/skin/logo/firefox.ico" style="display:none"/>
+    <browser id="content" type="content" src="" flex="1"/>
+    <script type="text/javascript">
+        window.addEventListener("DOMContentLoaded", function() {
+        var src = Components.utils.import("resource://ntab/mozCNUtils.jsm", {}).
+        Homepage.aboutpage;
+
+        var query = document.location.href.slice("about:cehome".length);
+        var fromQuery = /^\?from=(\w+)/.exec(query);
+        if (fromQuery) {
+        if (src.contains("?")) {
+        src = src.replace("?", (fromQuery[0] + "&amp;"));
+        } else {
+        src += fromQuery[0];
+        }
+        }
+
+        document.getElementById("content").setAttribute("src", src);
+        }, false);
+    </script>
+</window>

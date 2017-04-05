@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!DOCTYPE window [
+        <!ENTITY % preferencesDTD SYSTEM "chrome://cmtracking/locale/preferences.dtd" >
+        %preferencesDTD;
+        ]>
+<overlay id="dataChoices" xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript" src="chrome://cmtracking/content/dataChoices/overlay-preferences.js"></script>
+
+    <tabpanel id="dataChoicesPanel">
+        <groupbox>
+            <caption label="&trackingSection.label;"/>
+            <description>&trackingDesc.label;</description>
+            <hbox>
+                <checkbox id="submitTrackingBox"
+                          preference="extensions.cpmanager.tracking.enabled"
+                          label="&enableTracking.label;"
+                          accesskey="&enableTracking.accesskey;"/>
+                <spacer flex="1"/>
+                <label id="trackingLearnMore"
+                       class="text-link"
+                       value="&trackingLearnMore.label;"/>
+            </hbox>
+        </groupbox>
+    </tabpanel>
+    <preferences id="advancedPreferences">
+        <preference id="extensions.cpmanager.tracking.enabled"
+                    name="extensions.cpmanager.tracking.enabled"
+                    type="bool"/>
+    </preferences>
+
+</overlay>

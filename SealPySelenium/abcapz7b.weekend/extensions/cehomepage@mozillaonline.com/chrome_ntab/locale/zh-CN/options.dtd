@@ -1,0 +1,5 @@
+﻿<!ENTITY ntab.config.windowtitle "火狐中国版主页配置">
+        <!ENTITY ntab.config.pane1.title "界面">
+        <!ENTITY ntab.config.displayntab "启用新标签页功能">
+        <!ENTITY ntab.config.addurl "右键菜单中包括“添加至快速拨号”">
+        <!ENTITY ntab.config.usehotkey "使用快捷方式打开快速访问页 (Ctrl+1~9)">

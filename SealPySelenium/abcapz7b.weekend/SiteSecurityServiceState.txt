@@ -1,0 +1,5 @@
+self-repair.mozilla.org:HPKP	0	17230	1488705366572,1,0,WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg=sRHdihwgkaib1P1gxX8HFszlD+7/gTfNvuAybgLPNis=
+www.mozilla.org:HSTS	0	17230	1520241055571,1,0
+self-repair.mozilla.org:HSTS	0	17230	1520241066570,1,1
+normandy-cloudfront.cdn.mozilla.net:HPKP	0	17230	1488705361918,1,0,WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg=sRHdihwgkaib1P1gxX8HFszlD+7/gTfNvuAybgLPNis=
+www.google-analytics.com:HSTS	0	17230	1499591469928,1,1

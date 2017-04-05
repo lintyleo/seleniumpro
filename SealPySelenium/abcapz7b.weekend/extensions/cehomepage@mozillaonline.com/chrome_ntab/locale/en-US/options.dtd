@@ -1,0 +1,5 @@
+﻿<!ENTITY ntab.config.windowtitle "Cehomepage Preference">
+        <!ENTITY ntab.config.pane1.title "Display">
+        <!ENTITY ntab.config.displayntab "Automatic load in new blank tabs">
+        <!ENTITY ntab.config.addurl "Add 'Add to quick dial' to right click menu">
+        <!ENTITY ntab.config.usehotkey "Enable hotkey to open dial page (Ctrl+1~9)">

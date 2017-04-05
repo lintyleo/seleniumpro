@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<overlay id="improve" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/x-javascript" src="chrome://global/content/nsDragAndDrop.js"/>
+    <script type="application/x-javascript" src="chrome://cmimprove/content/gesture/dragdrop.js"/>
+</overlay>
+

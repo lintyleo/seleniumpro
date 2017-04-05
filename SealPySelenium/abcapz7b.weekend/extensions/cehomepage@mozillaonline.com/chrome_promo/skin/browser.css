@@ -1,0 +1,28 @@
+#cehpPromoIcon {
+  list-style-image: url("chrome://cehp-promo/skin/p1411.png");
+}
+
+#cehpPromoPopup {
+  height: 527px;
+  width: 527px;
+}
+
+#cehpPromoNoMoreContainer {
+  border-top: 1px solid #e3e3d3;
+  margin: 5px 33px 0 20px;
+  padding-top: 5px;
+}
+
+#cehpPromoNoMore {
+  color: #666;
+  cursor: pointer;
+}
+
+/*
+@media (-moz-mac-lion-theme) and (min-resolution: 2dppx) {
+  #cehpPromoIcon {
+    height: 16px;
+    list-style-image: url("chrome://cehp-promo/skin/p1411@2x.png");
+  }
+}
+*/

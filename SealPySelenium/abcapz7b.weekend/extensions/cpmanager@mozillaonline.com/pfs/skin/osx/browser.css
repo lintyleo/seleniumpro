@@ -1,0 +1,18 @@
+#plugin-install-notification-icon {
+  list-style-image: url(chrome://cmpfs-os/skin/pluginInstall-16.png);
+}
+@media (min-resolution: 2dppx) {
+  #plugin-install-notification-icon {
+    list-style-image: urlsl(chrome://cmpfs-os/skin/pluginInstall-16@2x.png);
+  }
+}
+
+.popup-notification-icon[popupid="plugins-not-found"] {
+  list-style-image: url(chrome://cmpfs-os/skin/pluginInstall-64.png);
+}
+@media (min-resolution: 2dppx) {
+  .popup-notification-icon[popupid="plugins-not-found"] {
+    list-style-image: url(chrome://cmpfs-os/skin/pluginInstall-64\@2x.png);
+  }
+}
+

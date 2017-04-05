@@ -1,0 +1,68 @@
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+#urlbar.sfbg_safe,
+#urlbar.sfbg_safe > .autocomplete-textbox-container {
+  background-color: #cf9;
+}
+
+#urlbar.sfbg_unsafe,
+#urlbar.sfbg_unsafe > .autocomplete-textbox-container {
+  background-color: red;
+}
+
+#safeflag-icon {
+  list-style-image: url("chrome://cmsafeflag/content/icons/special/safe.png");
+}
+
+#safeflag-icon.safeflag-unsafe {
+  list-style-image: url("chrome://cmsafeflag/content/icons/special/unsafe.png");
+}
+
+@media (-moz-mac-lion-theme) and (min-resolution: 2dppx) {
+  #safeflag-icon {
+    height: 16px;
+    list-style-image: url("chrome://cmsafeflag/content/icons/special/safe@2x.png");
+  }
+
+  #safeflag-icon.safeflag-unsafe {
+    list-style-image: url("chrome://cmsafeflag/content/icons/special/unsafe@2x.png");
+  }
+}
+
+#safeflag-contextpopup{
+  -moz-appearance: tooltip;
+}
+
+#safeflag-popup {
+  margin: 2px 0 0 0;
+  padding: 5px;
+  border: 1px solid white;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  color: white;
+  opacity: 0.9;
+  -moz-appearance: none;
+}
+
+.safeflag-popup-safe {
+  background: -moz-linear-gradient(center top , #15542D, #257A42);
+}
+
+.safeflag-popup-risk {
+  background: -moz-linear-gradient(center top , #540B1A, #771B1C);
+}
+
+html|p.safeflag-description {
+  margin: 0 5px;
+  width: 200px;
+  border-color: white;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  padding: 2px 0;
+  margin-bottom: 4px;
+}
+
+label.safeflag-result {
+  font-size: 14px;
+  font-weight: bold;
+}

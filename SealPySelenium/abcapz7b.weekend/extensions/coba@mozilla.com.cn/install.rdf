@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+
+    <em:id>coba@mozilla.com.cn</em:id>
+    <em:name>COBA</em:name>
+    <em:version>1.0.32</em:version>
+    <em:description>China Online Banking Assistant for Mozilla/Firefox.</em:description>
+    <em:creator>Mozilla Online Limited</em:creator>
+    <em:homepageURL>http://www.firefox.com.cn/</em:homepageURL>
+    <em:developer>Yuan Xulei</em:developer>
+    <em:developer>Jiao Feng</em:developer>
+    <em:developer>Deng Wei</em:developer>
+    <em:developer>Rui You</em:developer>
+    <em:optionsURL>chrome://coba/content/setting.xul</em:optionsURL>
+    <em:iconURL>chrome://coba/skin/logo.ico</em:iconURL>
+    <em:unpack>true</em:unpack>
+    <em:targetPlatform>WINNT</em:targetPlatform>
+    <em:updateURL>http://g-fox.cn/chinaedition/addons/coba/update.rdf</em:updateURL>
+    <em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDI9oBz+hSfHlNBrgdtc60mLujdpK4sCVDH1rD+1bh7++ni8ltJD0trCfhUKKiC234iMhHBgcr/bD9kYUbv7nlCz0lqPKM3DZC4eSgLsk8m077fk1Mmob3Pw5ZZlbCO9PWmwH2h/n9oUdx1YvrKN1+e2cocckcw4uGqalFGfYa9ywIDAQAB</em:updateKey>
+
+
+    <!-- Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>31.0</em:minVersion>
+        <em:maxVersion>44.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <em:localized>
+      <Description>
+        <em:locale>zh-CN</em:locale>
+        <em:name>网银支付助手</em:name>
+        <em:description>为火狐用户提供支付帮助.</em:description>
+        <em:creator>Mozilla Online Limited</em:creator>
+        <em:homepageURL>http://www.firefox.com.cn/</em:homepageURL>
+        <em:developer>袁徐磊</em:developer>
+        <em:developer>焦锋</em:developer>
+        <em:developer>邓威</em:developer>
+        <em:developer>尤睿</em:developer>
+        <em:description>使用IE控件访问网银</em:description>
+      </Description>
+    </em:localized>
+
+  </Description>
+</RDF>

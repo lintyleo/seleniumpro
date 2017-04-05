@@ -1,0 +1,4 @@
+#cm-menu-maintenance {
+  list-style-image: url("chrome://browser/skin/places/toolbar.png");
+  -moz-image-region: rect(0px, 80px, 16px, 64px);
+}

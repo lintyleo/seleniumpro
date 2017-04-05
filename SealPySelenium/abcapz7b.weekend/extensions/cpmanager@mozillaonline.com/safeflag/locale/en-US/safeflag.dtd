@@ -1,0 +1,16 @@
+<!ENTITY prefs.options "Options">
+
+        <!ENTITY safeflag.keepYourBrowserSafe "Firefox keeps you safe!" >
+        <!ENTITY safeflag.safeJudgedByGoogle "Safe Browsing" >
+        <!ENTITY safeflag.safeDescription "According to Google safe browsing service, the site you are visiting is safe." >
+        <!ENTITY safeflag.unSafeJudgedByGoogle "Dangerous web site warining!" >
+        <!ENTITY safeflag.unSafeDescription "According to Google safe browsing service, the site you are visiting is dangerous." >
+
+        <!-- about:blocked -->
+        <!ENTITY safeflag.aboutBlocked.header "Reported <span class='type phishing'>Web Forgery</span><span class='type malware'>Attack Page</span><span class='type unwanted'>Unwanted Software Site</span> !" >
+        <!ENTITY safeflag.aboutBlocked.contentPhishing "This web page at <span class='site-host'></span> has been reported as a web forgery and has been blocked based on your security preferences." >
+        <!ENTITY safeflag.aboutBlocked.contentMalware "This web page at <span class='site-host'></span> has been reported as an attack page and has been blocked based on your security preferences." >
+        <!ENTITY safeflag.aboutBlocked.contentUnwanted "This web page at <span class='site-host'></span> has been reported to contain unwanted software and has been blocked based on your security preferences." >
+        <!ENTITY safeflag.aboutBlocked.getMeOutButton "Get me out of here!" >
+        <!ENTITY safeflag.aboutBlocked.ignoreWarningButton "Ignore this warning" >
+        <!ENTITY safeflag.aboutBlocked.footer "Powered by <span class='partner pingan'>Ping'an</span>, <span class='partner baidu'>Baidu</span>, <span class='partner alliance'>anquan.org</span> and Google. <a href='#' id='cnReportButton'>Why was this page blocked?</a>" >

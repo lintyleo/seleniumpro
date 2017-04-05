@@ -1,0 +1,4 @@
+richlistitem[value$="@mozilla.com.cn"] > .warning,
+richlistitem[value$="@mozillaonline.com"] > .warning {
+  display: none;
+}

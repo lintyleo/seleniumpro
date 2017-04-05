@@ -1,0 +1,19 @@
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+#addon-notification-addon-notification button.popup-notification-menubutton > .button-box,
+#addon-notification-plugin-notification button.popup-notification-menubutton > .button-box,
+#addon-notification-text-notification button.popup-notification-menubutton > .button-box {
+  background: -moz-linear-gradient(#84C63C, #489615) repeat scroll 0 0 #489615;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
+  color: white;
+  font-weight: bold;
+  margin: -6px -10px;
+}
+
+#addon-notification-addon-notification button:hover.popup-notification-menubutton > .button-box,
+#addon-notification-plugin-notification button:hover.popup-notification-menubutton > .button-box,
+#addon-notification-text-notification button:hover.popup-notification-menubutton > .button-box {
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset, 0 0 100px rgba(255, 255, 255, 0.2) inset;
+}

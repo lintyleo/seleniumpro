@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>cehomepage@mozillaonline.com</em:id>
+    <em:version>0.10.46</em:version>
+    <em:name>Firefox Homepage</em:name>
+    <em:description>Customizied Home Page for Firefox</em:description>
+    <em:creator>Mozilla Online Limited</em:creator>
+    <em:contributor>Leding Li</em:contributor>
+    <em:contributor>Ray Cheung</em:contributor>
+    <em:contributor>Xuan Xie</em:contributor>
+    <em:contributor>jiangwei1212@gmail.com</em:contributor>
+    <em:contributor>Wennan Zhu</em:contributor>
+    <em:contributor>Amax Guan</em:contributor>
+    <em:optionsURL>chrome://ntab/content/options.xul</em:optionsURL>
+    <em:homepageURL>http://www.firefox.com.cn/</em:homepageURL>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>24.0</em:minVersion>
+        <em:maxVersion>46.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    <em:updateURL><![CDATA[http://g-fox.cn/chinaedition/addons/cehomepage-iii/update.rdf?version=%ITEM_VERSION%&pt=%CEHP_PREF_TRACKING%]]></em:updateURL>
+    <em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCd77P/ko6LTPMWcIjA5+0AJ7Y2w1CA31UYNTLA6OMwc9kcvO407SrE649A1ZUOi8bDPvJ6/KqVU9zPmv1XY1SjpEF8RlXP5SQ4KXirH4wnBk94cklYJTeDVuGOvCZS4KNazsjibERhRE7oGxg3X+rw+Ifu14AmAqXm4lyMrYIt/QIDAQAB</em:updateKey>
+    <em:unpack>true</em:unpack>
+    <em:localized>
+      <Description>
+        <em:locale>zh-CN</em:locale>
+        <em:name>火狐主页</em:name>
+        <em:description>火狐定制主页，包括最近访问页面、最常访问页面以及新标签页等</em:description>
+        <em:creator>Mozilla Online Limited</em:creator>
+        <em:homepageURL>http://www.firefox.com.cn/</em:homepageURL>
+      </Description>
+    </em:localized>
+  </Description>
+</RDF>

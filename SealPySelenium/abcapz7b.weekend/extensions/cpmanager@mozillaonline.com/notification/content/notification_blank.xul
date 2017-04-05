@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<!DOCTYPE window SYSTEM "chrome://cmnotification/locale/overlay.dtd">
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://cmnotification/skin/overlay.css" type="text/css"?>
+
+<overlay id="notification_blank" xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript;version=1.8" src="chrome://cmnotification/content/overlay.js"/>
+</overlay>

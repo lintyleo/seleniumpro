@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!-- // Updates: // // 2/24/10: ietab.net: Converted to new coba namespace.
+// -->
+<?xml-stylesheet href="chrome://global/skin/" type="text/css" ?>
+<!DOCTYPE window SYSTEM "chrome://coba/locale/coba.dtd">
+<dialog id="coba-dialog" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        autosize="true" resizable="no" persist="screenX screenY" buttons="accept,cancel,extra1"
+        onload="COBA.init();" onunload="COBA.destory();" ondialogaccept="COBA.setOptions(false);"
+        ondialogextra1="COBA.setOptions(false);" title="&coba.settings.title;">
+    <script type="application/x-javascript" src="chrome://coba/content/common.js "/>
+    <script type="application/x-javascript" src="chrome://coba/content/setting.js "/>
+    <tabbox>
+        <tabs>
+            <tab label="&coba.settings.filter.label;"/>
+            <tab label="&coba.settings.filter.official.label;"/>
+        </tabs>
+        <tabpanels>
+            <!-- Filter Tab 网址过滤-->
+            <tabpanel>
+                <vbox flex="1">
+                    <hbox align="center">
+                        <checkbox id="filtercbx" label="&coba.settings.filter.enabled;"
+                                  oncommand="COBA.updateFilterStatus();"/>
+                        <spacer flex="1"/>
+                        <button hidden="true" id="defbtn" label="&coba.settings.filter.button.default;"
+                                oncommand="COBA.defaultFilter();"/>
+                        <button id="delbtn" label="&coba.settings.filter.button.delete;" disabled="true"
+                                oncommand="COBA.delSelected();"/>
+                    </hbox>
+                    <hbox align="center" flex="1">
+                        <tree id="filterList" flex="1" width="375" height="170" seltype="multiple"
+                              enableColumnDrag="true" disableKeyNavigation="true" editable="true"
+                              onselect="COBA.updateDelButtonStatus();">
+                            <treecols>
+                                <treecol id="columnRule" label="&coba.settings.filter.column.rule;" flex="1"
+                                         persist="width ordinal hidden"/>
+                                <splitter class="tree-splitter"/>
+                                <treecol id="columnEnabled" label="&coba.settings.filter.column.enabled;" flex="0"
+                                         persist="width ordinal hidden" type="checkbox" editable="true"/>
+                            </treecols>
+                            <treechildren id="filterChilds" ondblclick="COBA.onClickFilterList(event);"/>
+                        </tree>
+                    </hbox>
+                    <hbox align="center">
+                        <label id="urllabel" value="&coba.settings.filter.url.label;"/>
+                        <textbox id="urlbox" flex="1" oninput="COBA.updateAddButtonStatus();"/>
+                        <button id="addbtn" label="&coba.settings.filter.button.add;" disabled="true"
+                                oncommand="COBA.addNewURL();"/>
+                    </hbox>
+                </vbox>
+            </tabpanel>
+            <!-- 订阅 -->
+            <tabpanel>
+                <vbox flex="1">
+                    <hbox align="center">
+                        <checkbox id="filtercbx-official" label="&coba.settings.filter.official.enabled;"
+                                  oncommand="COBA.updateOfficialFilterStatus();"/>
+                        <spacer flex="1"/>
+                        <checkbox id="autoUpdateFilter" label="&coba.settings.filter.official.updateFilter;"
+                                  oncommand=""/>
+                    </hbox>
+                    <hbox align="center" flex="1">
+                        <tree id="filterList-official" flex="1" width="375" height="170">
+                            <treecols>
+                                <treecol id="columnRule-official" label="&coba.settings.filter.official.column.rule;"
+                                         flex="1" persist="width ordinal hidden" type="text" editable="false"/>
+                                <splitter class="tree-splitter"/>
+                                <treecol id="columnEnabled-official"
+                                         label="&coba.settings.filter.official.column.enabled;" flex="0"
+                                         persist="width ordinal hidden" type="checkbox" editable="true"/>
+                            </treecols>
+                            <treechildren id="filterChilds-official"
+                                          ondblclick="COBA.onClickFilterListOfficial(event);"/>
+                        </tree>
+                    </hbox>
+                </vbox>
+            </tabpanel>
+        </tabpanels>
+    </tabbox>
+    <hbox>
+        <button dlgtype="extra2" id="mySettingManager" type="menu" label="&coba.settings.manager;" popup="settings">
+            <menupopup>
+                <menuitem id="import" label="&coba.settings.import;" oncommand="COBA.importSettings();"/>
+                <menuitem id="export" label="&coba.settings.export;" oncommand="COBA.exportSettings();"/>
+                <menuseparator/>
+                <menuitem id="default" label="&coba.settings.default;" oncommand="COBA.restoreDefaultSettings();"/>
+            </menupopup>
+        </button>
+        <spacer flex="1"/>
+        <button dlgtype="accept" id="myAccept"/>
+        <button dlgtype="extra1" id="myApply" label="&coba.settings.apply;"/>
+        <button dlgtype="cancel" id="myCancel"/>
+    </hbox>
+    <popupset>
+    </popupset>
+</dialog>

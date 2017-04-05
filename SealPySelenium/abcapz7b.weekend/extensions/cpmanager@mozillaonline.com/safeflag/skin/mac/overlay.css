@@ -1,0 +1,9 @@
+#urlbar #safeflag-addressbarpanel {
+
+  background: url("chrome://browser/skin/urlbar/textfield-mid.png") repeat-x scroll left center transparent;
+  padding: 1px 4px 1px 4px;
+}
+
+#urlbar[focused="true"] #safeflag-addressbarpanel {
+  background: url("chrome://browser/skin/urlbar/textfield-mid-focused.png");
+}

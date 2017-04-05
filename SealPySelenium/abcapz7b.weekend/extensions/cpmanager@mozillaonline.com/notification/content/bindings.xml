@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE bindings [
+        <!ENTITY % notificationDTD SYSTEM "chrome://global/locale/notification.dtd">
+        %notificationDTD;
+        ]>
+<bindings id="AddonNotiBindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl"
+          xmlns:html="http://www.w3.org/1999/xhtml">
+    <binding id="addon-notification-popup"
+             extends="chrome://global/content/bindings/notification.xml#popup-notification">
+        <content>
+            <xul:vbox>
+                <xul:image class="popup-notification-icon"
+                           xbl:inherits="popupid"/>
+            </xul:vbox>
+            <xul:vbox class="popup-notification-body" xbl:inherits="popupid">
+                <xul:hbox align="start">
+                    <xul:vbox flex="1">
+                        <xul:label anonid="title" class="popup-notification-label"/>
+                        <xul:description anonid="parentofa"
+                                         class="popup-notification-description"
+                                         xbl:inherits="xbl:text=label,popupid"/>
+                    </xul:vbox>
+                    <xul:toolbarbutton anonid="closebutton"
+                                       class="messageCloseButton close-icon popup-notification-closebutton tabbable"
+                                       xbl:inherits="oncommand=closebuttoncommand"
+                                       tooltiptext="&closeNotification.tooltip;"/>
+                </xul:hbox>
+                <xul:spacer flex="1"/>
+                <xul:hbox class="popup-notification-button-container"
+                          pack="end" align="center">
+                    <xul:label anonid="turnoff" class="text-link text-link-gray" hidden="true"/>
+                    <xul:label anonid="neverremind" class="text-link text-link-gray" hidden="true"/>
+                    <xul:spacer flex="1"/>
+                    <xul:button anonid="button"
+                                class="popup-notification-menubutton"
+                                type="button"
+                                xbl:inherits="oncommand=buttoncommand,label=buttonlabel,accesskey=buttonaccesskey">
+                    </xul:button>
+                    <xul:label anonid="close" class="text-link text-link-gray" hidden="true"/>
+                    <xul:label anonid="nexttip" class="text-link" hidden="true"/>
+                </xul:hbox>
+            </xul:vbox>
+        </content>
+        <implementation>
+            <constructor><![CDATA[
+        this.getByAID('title').value = this.notification.options.title;
+        if (this.notification.options.closeicon) {
+            this.getByAID('closebutton').addEventListener('command', this.notification.options.closeicon, false)
+        }
+        let links = this.notification.options.links;
+        for (var link in links) {
+            if (link == 'learnmore') {
+                if (links[link].href) {
+                    var desc = this.getByAID('parentofa');
+                    var learnmore = document.createElementNS('http://www.w3.org/1999/xhtml','a');
+                    learnmore.innerHTML = links[link].text;
+                    learnmore.href = links[link].href;
+                    learnmore.onclick = links[link].callback;
+                    desc.appendChild(learnmore);
+                }
+                continue
+            }
+            let linklabel = this.getByAID(link);
+            linklabel.value = links[link].text;
+            linklabel.onclick = links[link].callback;
+            if (links[link].tooltip) {
+                linklabel.tooltipText = links[link].tooltip
+            }
+            linklabel.hidden = false
+        }
+      ]]></constructor>
+            <method name="getByAID">
+                <parameter name="aid"/>
+                <body><![CDATA[
+          return document.getAnonymousElementByAttribute(this, "anonid", aid)
+        ]]></body>
+            </method>
+        </implementation>
+        <handlers>
+            <handler event="mouseover"
+                     action="try { this.notification.options.countdown.reset() } catch(err) { MOA.debug('mouseover countdown: ' + err) }"/>
+            <handler event="mouseout"
+                     action="try { this.notification.options.countdown.start() } catch(err) { MOA.debug('mouseout countdown: ' + err) }"/>
+        </handlers>
+    </binding>
+</bindings>

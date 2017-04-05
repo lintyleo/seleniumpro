@@ -1,0 +1,72 @@
+#ce-undo-close-toolbar-button {
+  list-style-image: url("chrome://cmimprove-os/skin/undo-close-tb.png") !important;
+}
+#ce-undo-close-toolbar-button[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] > #ce-undo-close-toolbar-button {
+  list-style-image: url("chrome://cmimprove-os/skin/undo-close-tb-32.png") !important;
+}
+#ce-undo-close-toolbar-button[cui-areatype="toolbar"]:not([overflowedItem=true]):-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://cmimprove-os/skin/undo-close-tb-inverted.png") !important;
+}
+
+/* should be all osx, but limit to 10.7+ for simplicity */
+@media (-moz-mac-lion-theme) {
+  #ce-undo-close-toolbar-button:hover:active:not([disabled="true"]):not([cui-areatype="menu-panel"]) {
+    list-style-image: url("chrome://cmimprove-os/skin/undo-close-tb-active.png") !important;
+  }
+  #ce-undo-close-toolbar-button[cui-areatype="toolbar"]:hover:active:not([disabled="true"]):not([overflowedItem=true]):-moz-lwtheme-brighttext {
+    list-style-image: url("chrome://cmimprove-os/skin/undo-close-tb-inverted-active.png") !important;
+  }
+}
+
+@media (-moz-mac-lion-theme) and (min-resolution: 2dppx) {
+  #ce-undo-close-toolbar-button {
+    list-style-image: url("chrome://cmimprove-os/skin/undo-close-tb@2x.png") !important;
+  }
+  #ce-undo-close-toolbar-button[cui-areatype="toolbar"]:not([overflowedItem=true]):-moz-lwtheme-brighttext {
+    list-style-image: url("chrome://cmimprove-os/skin/undo-close-tb-inverted@2x.png") !important;
+  }
+  #ce-undo-close-toolbar-button[cui-areatype="menu-panel"],
+  toolbarpaletteitem[place="palette"] > #ce-undo-close-toolbar-button {
+    list-style-image: url("chrome://cmimprove-os/skin/undo-close-tb-32@2x.png") !important;
+  }
+
+  #ce-undo-close-toolbar-button:hover:active:not([disabled="true"]):not([cui-areatype="menu-panel"]) {
+    list-style-image: url("chrome://cmimprove-os/skin/undo-close-tb-active@2x.png") !important;
+  }
+  #ce-undo-close-toolbar-button[cui-areatype="toolbar"]:hover:active:not([disabled="true"]):not([overflowedItem=true]):-moz-lwtheme-brighttext {
+    list-style-image: url("chrome://cmimprove-os/skin/undo-close-tb-inverted-active@2x.png") !important;
+  }
+
+  #ce-undo-close-toolbar-button > .toolbarbutton-icon,
+  #ce-undo-close-toolbar-button > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+    width: 16px;
+  }
+}
+
+#ce-undo-close-toolbar-button[cui-areatype="toolbar"][overflowedItem=true] > .toolbarbutton-menubutton-dropmarker {
+  width: 32px;
+}
+#ce-undo-close-toolbar-button[cui-areatype="menu-panel"] > .toolbarbutton-menubutton-dropmarker {
+  display: none;
+}
+
+#PanelUI-MOA-undoCloseView {
+  width: 256px;
+}
+#PanelUI-MOA-undoCloseView > toolbarbutton:not(.restoreallitem) {
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+}
+#PanelUI-MOA-undoCloseView > toolbarbutton > .toolbarbutton-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.animation-content {
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}

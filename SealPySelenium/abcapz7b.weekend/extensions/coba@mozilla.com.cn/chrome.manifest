@@ -1,0 +1,13 @@
+content	  coba   chrome/content/
+skin      coba   classic/1.0 chrome/skin/
+locale	coba	en-US	chrome/locale/en-US/
+locale	coba	zh-CN	chrome/locale/zh-CN/
+resource  coba   modules/
+
+overlay	   chrome://browser/content/browser.xul chrome://coba/content/overlay.xul
+style	     chrome://global/content/customizeToolbar.xul chrome://coba/skin/coba.css
+
+
+component {4A5F2348-6943-4d85-A652-A7F32B68259B} components/nsWatchFactory.js
+contract @mozilla.com.cn/coba;1 {4A5F2348-6943-4d85-A652-A7F32B68259B}
+category profile-after-change watchFactoryClass @mozilla.com.cn/coba;1

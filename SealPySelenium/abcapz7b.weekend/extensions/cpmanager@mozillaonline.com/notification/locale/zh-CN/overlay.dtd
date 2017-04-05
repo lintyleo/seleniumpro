@@ -1,0 +1,5 @@
+<!ENTITY addonnotification.clearAllData "清除所有数据">
+        <!ENTITY addonnotification.showFunctionTips "显示功能提示">
+
+        <!ENTITY addonnotification.tooltip.clearAllData "清除所有提醒数据">
+        <!ENTITY addonnotification.tooltip.showFunctionTips "显示功能提示">

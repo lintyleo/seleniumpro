@@ -1,0 +1,15 @@
+/* Center all hbox children vertically; don't stretch images */
+hbox, row { -moz-box-align: center; }
+
+/* Amend defaults for links in options dialogs */
+.text-link { text-decoration: none; }
+.text-link:hover { color: red; cursor: pointer !important; }
+
+/* Icons in options dialogs */
+image.icon { cursor: pointer; }
+image.arrow { padding: 2px 0px; cursor: pointer; }
+image.arrow[disabled="true"] { opacity: 0.5; cursor: default; }
+
+#button-close{
+  margin-left: 240px;
+}

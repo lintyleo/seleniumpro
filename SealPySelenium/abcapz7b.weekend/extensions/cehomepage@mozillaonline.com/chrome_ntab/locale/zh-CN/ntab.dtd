@@ -1,0 +1,59 @@
+<!ENTITY ntab.title "新标签页">
+
+        <!ENTITY ntab.context.export "导出我的配置文件">
+        <!ENTITY ntab.context.import "导入我的配置文件">
+
+        <!ENTITY ntab.context.edit "编辑">
+        <!ENTITY ntab.context.refresh "刷新">
+        <!ENTITY ntab.context.refreshall "刷新全部">
+
+        <!ENTITY ntab.label.setdefault "设为默认浏览器">
+        <!ENTITY ntab.tooltip.switchtonav "切换至导航页">
+        <!ENTITY ntab.tooltip.switchtoquickdial "切换至快速拨号">
+        <!ENTITY ntab.tooltip.switchtosearch "切换至搜索页">
+        <!ENTITY ntab.tooltip.switchtoblank "切换至空白页">
+
+        <!ENTITY ntab.firefoxchina "火狐主页">
+
+        <!ENTITY ntab.launcher.relatedtabs "访问记录">
+        <!ENTITY ntab.launcher.relatedtabs.all "全选">
+        <!ENTITY ntab.launcher.relatedtabs.open "打开">
+
+        <!ENTITY ntab.launcher.tools "工具箱">
+        <!ENTITY ntab.launcher.tools.downloads "下载">
+        <!ENTITY ntab.launcher.tools.bookmarks "书签">
+        <!ENTITY ntab.launcher.tools.history "历史">
+        <!ENTITY ntab.launcher.tools.add-ons "附加组件">
+        <!ENTITY ntab.launcher.tools.sync "同步">
+        <!ENTITY ntab.launcher.tools.settings "设置">
+
+        <!ENTITY ntab.launcher.pagesettings "页面设置">
+
+        <!ENTITY ntab.launcher.pagesettings.background "背景设置">
+        <!ENTITY ntab.launcher.pagesettings.background.noise "显示底纹">
+        <!ENTITY ntab.launcher.pagesettings.background.reset "重置背景">
+        <!ENTITY ntab.launcher.pagesettings.background.style.fill "填充">
+        <!ENTITY ntab.launcher.pagesettings.background.style.fit "适应">
+        <!ENTITY ntab.launcher.pagesettings.background.style.stretch "拉伸">
+        <!ENTITY ntab.launcher.pagesettings.background.style.tile "平铺">
+        <!ENTITY ntab.launcher.pagesettings.background.style.center "居中">
+        <!ENTITY ntab.launcher.pagesettings.quickdial "行列选择">
+        <!ENTITY ntab.launcher.pagesettings.quickdial.row "行数">
+        <!ENTITY ntab.launcher.pagesettings.quickdial.col "列数">
+        <!ENTITY ntab.launcher.pagesettings.misc "其他设置">
+        <!ENTITY ntab.launcher.pagesettings.misc.openinnewtab "新标签页打开链接">
+        <!ENTITY ntab.launcher.pagesettings.misc.hidesearch "隐藏搜索栏">
+        <!ENTITY ntab.launcher.pagesettings.misc.restore "还原为初始设置">
+        <!ENTITY ntab.launcher.pagesettings.misc.feedback "意见反馈">
+
+        <!ENTITY ntab.quickdial.grid "我最常用">
+        <!ENTITY ntab.quickdial.site "分类导航">
+
+        <!ENTITY ntab.editor.title "标题">
+        <!ENTITY ntab.editor.url "网址">
+        <!ENTITY ntab.editor.add "添加">
+        <!ENTITY ntab.editor.related "访问记录">
+        <!ENTITY ntab.editor.bookmark "我的书签">
+        <!ENTITY ntab.editor.promoted "常用网址">
+        <!ENTITY ntab.editor.frequent "访问最多的网页">
+        <!ENTITY ntab.editor.session "最近访问的网页">

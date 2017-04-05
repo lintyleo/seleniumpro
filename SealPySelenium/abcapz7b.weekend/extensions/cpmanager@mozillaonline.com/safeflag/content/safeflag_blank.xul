@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<!DOCTYPE window SYSTEM "chrome://cmsafeflag/locale/safeflag.dtd">
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://cmsafeflag/skin/overlay.css" type="text/css"?>
+
+<overlay id="safeflag_blank" xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script src="chrome://cmsafeflag/content/uninstall.js"/>
+</overlay>

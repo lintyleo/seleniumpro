@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/">
+    <ShortName>爱淘宝</ShortName>
+    <Description>淘宝购物搜索 - 只有你想不到，没有你淘不到</Description>
+    <InputEncoding>GB2312</InputEncoding>
+    <Image width="16" height="16">
+        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABYklEQVQ4jZ3TPUtCURjA8fs93HUxRYduXoIKWsK1aBOn6Du0udlSU0sEERRRRAoaKNIQGEaFlVktShw1dEhRr+lF4t+gXpWrgR544HDOeX7nXZIkSUqZzEwTUi85Y3YgrPJEkTE7OkjKZEbMzCHsCr/VGsKu6IOAf5E+0E0GdKQZTzCuVPw7w8CXexVhV2h/ig5WrwNQ3ds3zNorQ8Bgo7DKlLybNBP3OjTY37y9MwKFhRV+otcAFNc8OtSIxABo3sT1ttZj0ggIq4ywKwCogRC1w+Ox+9eeX0cDeWUZgPrpBcIqowbDaG8fALSSLzSuot0VPI0Gyj4/AGWfHzUY1gepgZB+eFoqPRrIzS7SFnkASp4NKtu7hjcAUD+/pHX3YAR6yQCFJTfC5ho6+cG6ln43AsV1LwCNSAxhc3Vmtbn43vIBUD04IueY76/k5GzELUwROpC1OCdOzlqcwz9y2u/8B+uwtpMWcKPmAAAAAElFTkSuQmCC
+    </Image>
+    <Url type="text/html" template="http://ai.taobao.com/search/index.htm">
+        <Param name="key" value="{searchTerms}"/>
+        <Param name="pid" value="mm_28347190_2425761_9494155"/>
+    </Url>
+    <SearchForm>http://ai.taobao.com/?pid=mm_28347190_2425761_9494155</SearchForm>
+</SearchPlugin>

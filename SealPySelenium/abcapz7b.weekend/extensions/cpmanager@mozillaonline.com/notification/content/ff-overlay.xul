@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://cmnotification/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://cmnotification/locale/overlay.dtd">
+<overlay id="addonnotification-overlay" xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript;version=1.8" src="chrome://cmnotification/content/netlib.js"/>
+    <script type="application/javascript;version=1.8" src="chrome://cmnotification/content/defaultrules.js"/>
+    <script type="application/javascript;version=1.8" src="chrome://cmnotification/content/rulecenter.js"/>
+    <script type="application/javascript;version=1.8" src="chrome://cmnotification/content/track.js"/>
+    <script type="application/javascript;version=1.8" src="chrome://cmnotification/content/notifications.js"/>
+    <script type="application/javascript;version=1.8" src="chrome://cmnotification/content/netMonitor.js"/>
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="addonnotification-strings" src="chrome://cmnotification/locale/overlay.properties"/>
+    </stringbundleset>
+    <box id="notification-popup-box">
+        <image id="texts-notification-icon" class="notification-anchor-icon" role="button"/>
+    </box>
+    <popupset id="mainPopupSet">
+        <panel id="addon-notification-popup"
+               type="arrow"
+               footertype="promobox"
+               position="after_start"
+               hidden="true"
+               orient="vertical"
+               role="alert"
+               noautohide="true"/>
+    </popupset>
+</overlay>

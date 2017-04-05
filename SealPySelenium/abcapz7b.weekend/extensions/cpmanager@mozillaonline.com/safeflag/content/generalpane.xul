@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://cmsafeflag/locale/options.dtd">
+
+<overlay
+        id="sf-options-prefpane"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript">
+        (function() {
+        function toggleSF() {
+        if (document.getElementById("c-enable").checked) {
+        document.getElementById("b-safe").disabled = false;
+        document.getElementById("b-unsafe").disabled = false
+        }else {
+        document.getElementById("b-safe").disabled = true;
+        document.getElementById("b-unsafe").disabled = true
+        }
+        }
+        function init() {
+        toggleSF();
+        document.getElementById('c-enable').addEventListener('CheckboxStateChange', toggleSF, false)
+        }
+        document.getElementById("generalpane").addEventListener('paneload', init, false)
+        })();
+    </script>
+
+    <prefpane id="generalpane">
+        <preferences id="preferences">
+            <preference id="b-enable" name="extensions.safeflag.enable" type="bool"/>
+            <preference id="b-safe" name="extensions.safeflag.background.safe" type="bool"/>
+            <preference id="b-unsafe" name="extensions.safeflag.background.unsafe" type="bool"/>
+            <preference id="b-enableurl2qr" name="extensions.cmimprove.url2qr.enabled" type="bool"/>
+            <preference id="b-enablegesture" name="extensions.cmimprove.gesture.enabled" type="bool"/>
+        </preferences>
+        <vbox id="checkboxes">
+            <checkbox id="c-enable" preference="b-enable" label="&c-enable.label;"/>
+            <checkbox id="c-safe" preference="b-safe" label="&c-safe.label;" class="indent"/>
+            <checkbox id="c-unsafe" preference="b-unsafe" label="&c-unsafe.label;" class="indent"/>
+            <checkbox id="c-enableurl2qr" preference="b-enableurl2qr" label="&c-enableurl2qr.label;"/>
+            <checkbox id="c-enablegesture" preference="b-enablegesture" label="&c-enablegesture.label;"/>
+        </vbox>
+    </prefpane>
+</overlay>

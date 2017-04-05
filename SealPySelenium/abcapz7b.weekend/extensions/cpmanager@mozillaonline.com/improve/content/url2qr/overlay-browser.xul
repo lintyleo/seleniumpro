@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE window SYSTEM "chrome://cmimprove/locale/url2qr.dtd">
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://cmimprove/skin/url2qr.css" type="text/css"?>
+
+<overlay id="mo-url2qr" xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/javascript;version=1.8" src="chrome://cmimprove/content/url2qr/qr.js"></script>
+    <script type="application/javascript;version=1.8" src="chrome://cmimprove/content/url2qr/url2qr.js"></script>
+
+    <hbox id="urlbar-icons">
+        <image id="mo-url2qr-icon"
+               class="urlbar-icon"
+               hidden="true"
+               insertafter="safeflag-icon"
+               tooltiptext="&mo-url2qr.generateQR;"
+               popup="mo-url2qr-popup"/>
+    </hbox>
+
+    <popupset id="mainPopupSet">
+        <panel id="mo-url2qr-popup" type="arrow" noautofocus="true"
+               onpopupshown="MOA.URL2QR.popupShown();"
+               orient="vertical" align="center" level="top">
+            <image id="mo-url2qr-image"/>
+            <hbox>
+                <label value="&mo-url2qr.instructions;"/>
+            </hbox>
+            <hbox align="center">
+                <label value="&mo-url2qr.instructions1;"/>
+                <label id="mo-url2qr-fx4a" class="text-link" value="Firefox for Android"
+                       href="http://download.firefox.com.cn/releases/mobile/url2qr/zh-CN/firefox-android-latest.apk?src=url2qr"/>
+            </hbox>
+            <hbox>
+                <label value="&mo-url2qr.instructions2;"/>
+            </hbox>
+        </panel>
+    </popupset>
+</overlay>

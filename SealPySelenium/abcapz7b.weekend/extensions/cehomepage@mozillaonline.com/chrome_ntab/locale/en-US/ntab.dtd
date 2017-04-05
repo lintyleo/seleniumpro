@@ -1,0 +1,59 @@
+<!ENTITY ntab.title "New Tab">
+
+        <!ENTITY ntab.context.export "Export">
+        <!ENTITY ntab.context.import "Import">
+
+        <!ENTITY ntab.context.edit "Edit">
+        <!ENTITY ntab.context.refresh "Refresh">
+        <!ENTITY ntab.context.refreshall "Refresh All">
+
+        <!ENTITY ntab.label.setdefault "Set as default Browser">
+        <!ENTITY ntab.tooltip.switchtonav "Switch to navigation">
+        <!ENTITY ntab.tooltip.switchtoquickdial "Switch to quick dial">
+        <!ENTITY ntab.tooltip.switchtosearch "Switch to search">
+        <!ENTITY ntab.tooltip.switchtoblank "Switch to blank">
+
+        <!ENTITY ntab.firefoxchina "Firefox Homepage">
+
+        <!ENTITY ntab.launcher.relatedtabs "Recent Visits">
+        <!ENTITY ntab.launcher.relatedtabs.all "Select All">
+        <!ENTITY ntab.launcher.relatedtabs.open "Open">
+
+        <!ENTITY ntab.launcher.tools "Tools">
+        <!ENTITY ntab.launcher.tools.downloads "Downloads">
+        <!ENTITY ntab.launcher.tools.bookmarks "Bookmarks">
+        <!ENTITY ntab.launcher.tools.history "History">
+        <!ENTITY ntab.launcher.tools.add-ons "Add-ons">
+        <!ENTITY ntab.launcher.tools.sync "Sync">
+        <!ENTITY ntab.launcher.tools.settings "Settings">
+
+        <!ENTITY ntab.launcher.pagesettings "Page Settings">
+
+        <!ENTITY ntab.launcher.pagesettings.background "Background">
+        <!ENTITY ntab.launcher.pagesettings.background.noise "Show texture">
+        <!ENTITY ntab.launcher.pagesettings.background.reset "Reset background">
+        <!ENTITY ntab.launcher.pagesettings.background.style.fill "Fill">
+        <!ENTITY ntab.launcher.pagesettings.background.style.fit "Fit">
+        <!ENTITY ntab.launcher.pagesettings.background.style.stretch "Stretch">
+        <!ENTITY ntab.launcher.pagesettings.background.style.tile "Tile">
+        <!ENTITY ntab.launcher.pagesettings.background.style.center "Center">
+        <!ENTITY ntab.launcher.pagesettings.quickdial "Quick Dial">
+        <!ENTITY ntab.launcher.pagesettings.quickdial.row "Row">
+        <!ENTITY ntab.launcher.pagesettings.quickdial.col "Column">
+        <!ENTITY ntab.launcher.pagesettings.misc "Misc">
+        <!ENTITY ntab.launcher.pagesettings.misc.openinnewtab "Open link in new tab">
+        <!ENTITY ntab.launcher.pagesettings.misc.hidesearch "Hide search bar on top of dial page">
+        <!ENTITY ntab.launcher.pagesettings.misc.restore "Restore original settings">
+        <!ENTITY ntab.launcher.pagesettings.misc.feedback "User feedback">
+
+        <!ENTITY ntab.quickdial.grid "Frequent">
+        <!ENTITY ntab.quickdial.site "Mini-nav">
+
+        <!ENTITY ntab.editor.title "Title">
+        <!ENTITY ntab.editor.url "URL">
+        <!ENTITY ntab.editor.add "Add">
+        <!ENTITY ntab.editor.related "Recent Visits">
+        <!ENTITY ntab.editor.bookmark "Bookmarks">
+        <!ENTITY ntab.editor.promoted "Promotion">
+        <!ENTITY ntab.editor.frequent "Frequently visited">
+        <!ENTITY ntab.editor.session "Recently visited">

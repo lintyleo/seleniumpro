@@ -1,0 +1,4 @@
+<!ENTITY mo-url2qr.generateQR "Generate QR Code of current page">
+        <!ENTITY mo-url2qr.instructions "Scan with your phone to open it">
+        <!ENTITY mo-url2qr.instructions1 "Using">
+        <!ENTITY mo-url2qr.instructions2 "Or other scanners like WeChat">

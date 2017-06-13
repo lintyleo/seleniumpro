@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-parent</artifactId>
-        <version>2.53.1</version>
+        <version>3.3.1</version>
     </parent>
     <artifactId>selenium-server</artifactId>
     <name>selenium-server</name>
@@ -16,6 +16,7 @@
         <xmlFileName>testng.xml</xmlFileName>
     </properties>
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>

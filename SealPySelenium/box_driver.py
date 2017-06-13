@@ -14,7 +14,7 @@ class BoxDriver(object):
     base_driver = None
     by_char = None
 
-    def __init__(self, by_char=",", firefox_profile=None):
+    def __init__(self, by_char=",", profile=None, browser="chrome"):
         """
         构造方法：实例化 BoxDriver 时候使用
         :param by_char: 分隔符
@@ -23,11 +23,15 @@ class BoxDriver(object):
         如果传递一个 profile，就会按照预先的设定启动火狐
         去掉遮挡元素的提示框等
         """
+        driver = None
+        if browser == "chrome":
+            driver = webdriver.Chrome(executable_path=profile)
+        elif browser == "firefox":
 
-        if firefox_profile is not None:
-            firefox_profile = FirefoxProfile(firefox_profile)
+            if profile is not None:
+                profile = FirefoxProfile(profile)
 
-        driver = webdriver.Firefox(firefox_profile=firefox_profile)
+            driver = webdriver.Firefox(firefox_profile=profile)
         try:
             self.base_driver = driver
             self.by_char = by_char

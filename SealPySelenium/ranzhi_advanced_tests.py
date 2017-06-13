@@ -22,11 +22,11 @@ class RanzhiAdvancedTests(unittest.TestCase):
         前置条件
         :return:
         """
-        profile = "abcapz7b.weekend"
+        profile = "C:/python35/chromedriver.exe"
 
-        self.base_driver = BoxDriver(",", profile)
+        self.base_driver = BoxDriver(",", profile, "chrome")
         self.base_driver.clear_cookies()
-        self.base_url = "http://localhost/ranzhi/www/"
+        self.base_url = "http://localhost/"
         self.common = RanzhiCommon(self.base_driver, self.base_url)
 
     def tearDown(self):
